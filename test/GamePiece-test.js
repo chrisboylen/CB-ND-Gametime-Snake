@@ -1,50 +1,53 @@
-const { assert } = require('chai');
+const {
+  expect
+} = require('chai');
 const GamePiece = require('../lib/GamePiece.js');
 
-describe('GamePiece', function () {
+describe('GamePiece', () => {
+  let gamePiece;
 
-  it('should have properties', function () {
-    const gamePiece = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1, 1, 1.5);
-    const expectedObj = {
+  beforeEach(() => {
+    gamePiece = new GamePiece(50, 50, 10, 10, "green", 1, 1.5);
+  });
+
+  it('Should exist', () => {
+    expect(gamePiece).to.exist;
+    expect(gamePiece).to.be.an.instanceOf(GamePiece);
+  });
+
+  it('Should set instance properties', () => {
+    expect(gamePiece).to.deep.equal(gamePiece, {
       x: 50,
       y: 50,
-      height: 10, 
+      height: 10,
       width: 10,
-      color: 'rgb(250, 0, 0)',
+      color: "green",
       dx: 1,
-      dy: 1,
       dxv: 1.5
-    };
+    });
 
-    assert.deepEqual(gamePiece, expectedObj);
+  });
+
+  it('Should have a isCollidingWith method', () => {
+    const gamePiece2 = new GamePiece(50, 58, 10, 10, "green", 1, 1.5)
+
+    const isColliding = gamePiece.isCollidingWith(gamePiece2);
+    expect(isColliding).to.be.true;
+  });
+
+  it('Should have a isCollidingWith method', () => {
+    const gamePiece2 = new GamePiece(65, 65, 10, 10, "green", 1, 1.5)
+
+    const isColliding = gamePiece.isCollidingWith(gamePiece2);
+    expect(isColliding).to.be.false;
+  });
+
+  it('Should have a move method', () => {
+    gamePiece.move();
+
+    const actualState = gamePiece.x;
+    const expectedState = 51.5;
+
+    expect(actualState).equal(expectedState);
   })
-  it('should be able to collide with other objects', function(){
-    const gamePiece1 = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-    const gamePiece2 = new GamePiece(50, 58, 10, 10, 'rgb(250, 0, 0)', 1);
-    const isColliding = gamePiece1.isCollidingWith(gamePiece2);
-
-    assert.isTrue(isColliding);
-  })
-
-  it('should be NOT be colliding with other objects when they dont overlap', function(){
-    const gamePiece1 = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-    const gamePiece2 = new GamePiece(65, 65, 10, 10, 'rgb(250, 0, 0)', 1);
-    const isColliding = gamePiece1.isCollidingWith(gamePiece2);
-
-    assert.isFalse(isColliding);
-  })
-
-  it('see how isTrue works', function(){
-    assert.isTrue(true);
-  })
-
-
-  it('should move', function(){
-    const gamePiece1 = new GamePiece(50, 50, 10, 10, 'rgb(250, 0, 0)', 1);
-    gamePiece1.move()
-    assert.equal(gamePiece1.x, 51.5);
-  })
-  
-
-  
-})
+});
