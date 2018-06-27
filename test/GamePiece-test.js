@@ -1,6 +1,4 @@
-const {
-  expect
-} = require('chai');
+const { expect } = require('chai');
 const GamePiece = require('../lib/GamePiece.js');
 
 describe('GamePiece', () => {
@@ -25,7 +23,7 @@ describe('GamePiece', () => {
       dx: 1,
       dxv: 1.5
     });
-
+    
   });
 
   it('Should have a isCollidingWith method', () => {
@@ -44,7 +42,7 @@ describe('GamePiece', () => {
 
   it('Should have a move method', () => {
     gamePiece.move();
-
+    
     const actualState = gamePiece.x;
     const expectedState = 51.5;
 
