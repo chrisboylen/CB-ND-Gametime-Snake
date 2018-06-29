@@ -28,5 +28,14 @@ describe('Game', () => {
     }
 
     expect(actualState).to.deep.equal(expectedState);
-  })
+  });
+
+  it('Should should have a eatFood method', () => {
+    const eatFood = snake.isCollidingWith(food);
+
+    const actualState = eatFood;
+    const expectedState = false; 
+
+    expect(actualState).to.deep.equal(expectedState);
+  });
 });
