@@ -23,14 +23,14 @@ describe('Game', () => {
       gameOver: false,
       score: 0,
       highScore: 0,
-      snake: new Snake(50, 50, 10, 10, 'rgb(255, 0, 0)', 1),
-      food: new Food(150, 10, 10, 10, 'rgb(0, 255, 0)')
+      snake: new Snake(50, 50, 20, 20, 'rgb(255, 0, 0)', 1),
+      food: new Food(150, 10, 18, 18, 'rgb(0, 255, 0)')
     }
 
     expect(actualState).to.deep.equal(expectedState);
   });
 
-  it('Should should have a eatFood method', () => {
+  it('Should should have a eatFood method that does not eat', () => {
     const eatFood = snake.isCollidingWith(food);
 
     const actualState = eatFood;
