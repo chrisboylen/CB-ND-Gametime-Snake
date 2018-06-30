@@ -3,8 +3,6 @@
   src: url(fonts/newyorkescape.tff);
 }
 
-
-
 *{
   margin: 0;
   padding: 0;
@@ -13,16 +11,51 @@
 }
 
 .main-page{
-  background: no-repeat center fixed url('/img/new-wallpaper.jpg');
+  background: no-repeat fixed url('/img/new-wallpaper.jpg');
+  background-size: cover;
 }
 
 .header{ 
-  /* background-color: rgba(59, 59, 59, 0.918); */
-  text-align: center;
   padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.header-box{
+  text-align: left;
+  display: block;
+  margin-left: 32rem;
+  margin-bottom: 1rem;
   
 }
+
+.new-york{
+  position: relative;
+}
+
+.new-york:before{
+  content: 'from';
+  position: absolute;
+  height: 60%;
+  bottom: 3rem;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
+  left: 16rem;
+  width:15%;
+  font-size: 1.5rem;
+}
+
+
+.header h1{
+  font-size: 3rem;
+  color: red;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.header-box :nth-child(2){
+  letter-spacing: 1rem;
+}
+
 
 .header li{
   display: inline-block;
@@ -32,7 +65,22 @@
   position: relative;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  
+  font-family: 'Montserrat';
+  cursor: pointer;
+  z-index: 1;
+}
+
+header li:hover:before{
+  content: '';
+  position: absolute;
+  background: red;
+  height: 60%;
+  top: 0rem;
+  left: 5rem;
+  width: 50%;
+  transform: skewY(-4deg);
+  z-index: -1;
+
 }
 
 .special-li:after{
@@ -46,8 +94,7 @@
 
 .logo {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 20rem;
   
 }
@@ -60,44 +107,59 @@
   border: 1px solid red;
 }
 
-.scoreboard{
-  /* background: red; */
-  text-align: center;
-  text-shadow: 2px 2px 4px #000000;
-}
 
 .scoreboard{
   font-size: 3rem;
   display: inline-block;
   font: url('font/newyorkescape.tff');
   color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.top-score{
+  position: relative;
+}
+
+.top-score:after{
+  content: '';
+  position: absolute;
+  background: red;
+  height: 10%;
+  top: 5rem;
+  left: 2rem;
+  width: 90%;
+  text-shadow: 2px 2px 4px #000000;
+  transform: skewY(9deg, 9deg);
 }
 
 .score-actual{
-  margin-top: 8rem;
+  margin-top: 6rem;
   font-size: 12rem;
   text-shadow: 2px 2px 4px #000000;
+  position: relative;
+  z-index: 2;
+}
+
+.score-actual:after{
+  content: '';
+  position: absolute;
+  background: red;
+  height: 40%;
+  top: 5rem;
+  left: 2rem;
+  width: 90%;
+  text-shadow: 2px 2px 4px #000000;
+  transform: skewY(9deg);
+  z-index: -1;
 }
 
 .top-player{
   font-size: 5rem;
   letter-spacing: 1.5rem;
+  margin-top: 3rem;
   position: relative;
   z-index: 1;
-}
-
-.top-player:after{
-  content: '';
-  position: absolute;
-  width: 90%;
-  height: 100%;
-  left: 3%;
-  background-color: rgb(245, 0, 0);
-  transform: skewY(5deg);
-  bottom: -.3rem;
-  font-size: 2rem;
-  z-index: -1;
-
 }
 
 .landing-page{
@@ -139,6 +201,28 @@
   text-align : center;
   overflow: hidden;
   color: white;
+  transition: all 300ms ease-in;
+}
+
+.special-hover{
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #000000;
+  
+}
+
+.special-hover:hover:before{
+  content: '';
+  position: absolute;
+  background: red;
+  height: 60%;
+  top: 0rem;
+  left: 5rem;
+  width: 50%;
+  transform: skewY(-4deg);
+  z-index: -1;
+  
 }
 
 .arrow-keys{
@@ -155,13 +239,26 @@
   background-color: red;
   bottom: 4rem;
   font-size: 2rem;
+  border: 1px solid white;
 
 }
 
 
 .game-literal {
-  /* background: center url('/img/asphalt.jpg'); */
+  text-align: center;
 }
+
+.game-literal:after{
+  content: ' v ';
+  font-family: 'Montserrat';
+   height: 100%;
+   text-align: center;
+   left: 20rem;
+   width: 100%;
+   font-size: 3rem;
+   color: white;
+}
+
 
 h4{
   text-align: center;
@@ -178,10 +275,11 @@ h4{
 
 
 .text-divider:before{
-  content: 'How to Play';
+  content: 'Lore';
   width: 100%;
   height: 100%;
   position: absolute;
+  font-family: 'Montserrat';
   right: 0;
   bottom: 5rem;
   text-decoration: underline;
@@ -222,7 +320,10 @@ footer{
   grid-template-columns: 20rem 20rem;
   justify-content: space-around;
   margin-top: 4rem;
+}
 
+footer h2{
+  font-family: 'Montserrat';
 }
 
 .rounded-image{
