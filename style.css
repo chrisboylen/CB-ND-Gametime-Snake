@@ -62,7 +62,7 @@
   display: grid;
   grid-template-columns: 30rem 30rem 30rem;
   position: relative;
-  height: 120vh;
+  height: 110vh;
   /* overflow: hidden; */
 }
 
@@ -84,7 +84,7 @@
   background: rgb(255, 255, 255);
   height: 20%;
   width: 50%;
-  top: 84.20%;
+  top: 83.80%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
@@ -100,18 +100,9 @@
 
 .how-to-play img{
   margin-top: 6rem;
-  position: relative;
   background-color: red;
 }
 
-.how-to-play img:after{
-  content: '';
-  position: absolute;
-  background: #fff;
-  height: 100%;
-  top: 0%;
-  width: 100%;
-}
 
 .game-literal {
   background: center url('/img/asphalt.jpg');
@@ -124,27 +115,50 @@ h4{
   font-size: 2rem;
 }
 
-.instruction{
+.text-divider{
   background-color: white;
   text-align: center;
   font-size: 2rem;
   position: relative;
 }
 
-.instruction:before{
+
+.text-divider:before{
   content: 'How to Play';
   width: 100%;
   height: 100%;
   position: absolute;
   right: 0;
-  bottom: 7rem;
+  bottom: 5rem;
   text-decoration: underline;
 }
 
-.lore{
+.divider-title{
   margin-top: 6rem;
 }
 
+.snake-face{
+  float: left;
+  height: 25rem;
+  margin: 5rem 0 0 1rem;
+}
+
+.lore{
+  display: grid;
+  grid-template-columns: 30rem 30rem;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.lore :nth-child(2){
+  background-color: grey;
+}
+
+.lore h2{
+  margin-top: 2rem;
+  font-size: 3rem;
+}
 .below-instructions{
   height: 40vh;
 }
