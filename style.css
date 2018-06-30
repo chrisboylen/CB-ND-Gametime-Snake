@@ -8,6 +8,7 @@
 .header{ 
   background-color: rgb(59, 59, 59);
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .header li{
@@ -40,4 +41,71 @@
 
 #game{
   border: 1px solid #DB3A8B
+}
+
+.scoreboard{
+  /* background: red; */
+  text-align: center;
+}
+
+.scoreboard{
+  font-size: 5rem;
+  display: inline-block;
+}
+
+.scoreboard h1{
+  font-size: 12rem;
+}
+
+.landing-page{
+  background: no-repeat center fixed url('/img/wallpaper.jpg');
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+
+.how-to-play{
+  /* background: red; */
+  display: grid;
+  grid-template-rows: 10rem 10rem 2rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.how-to-play:after{
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  top: 100%;
+
+
+}
+
+.game-literal {
+  background: center url('/img/asphalt.jpg');
+}
+
+h4{
+  text-align: center;
+  margin-top: 6rem;
+  background-color: yellow;
+  font-size: 2rem;
+}
+
+.angled-div{
+  background-color: green;
+  border: 20px 20px 0 0;
+}
+
+.instruction{
+  height: 80vh;
+  background-color: purple;
+}
+
+.below-instructions{
+  height: 40vh;
 }
