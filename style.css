@@ -84,7 +84,7 @@
   background: rgb(255, 255, 255);
   height: 20%;
   width: 50%;
-  top: 83.80%;
+  top: 83.7%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
@@ -159,6 +159,30 @@ h4{
   margin-top: 2rem;
   font-size: 3rem;
 }
-.below-instructions{
-  height: 40vh;
+
+
+footer{
+  text-align: center;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  justify-content: space-around;
+  margin-top: 4rem;
+
 }
+
+.rounded-image{
+  margin-top: 2rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 4rem;
+  position: relative;
+  border: 10px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#bdc3c7, #2c3e50);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+
+/* Flip effect */
+
