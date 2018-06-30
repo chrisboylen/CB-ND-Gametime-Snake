@@ -58,11 +58,26 @@
 }
 
 .landing-page{
-  background: no-repeat center fixed url('/img/wallpaper.jpg');
+  background: no-repeat center url('/img/wallpaper.jpg');
   display: grid;
   grid-template-columns: 30rem 30rem 30rem;
   position: relative;
+  height: 120vh;
   /* overflow: hidden; */
+}
+
+
+.landing-page:before{
+  content: '';
+  position: absolute;
+  background: #fff;
+  height: 30%;
+  width: 100%;
+  top: 92%;
+  transform-origin: right;
+  transform: skewY(8deg);
+
+
 }
 
 
@@ -74,15 +89,19 @@
   overflow: hidden;
 }
 
-.how-to-play:after{
+.how-to-play img{
+  margin-top: 6rem;
+  position: relative;
+  background-color: red;
+}
+
+.how-to-play img:after{
   content: '';
   position: absolute;
   background: #fff;
   height: 100%;
+  top: 0%;
   width: 100%;
-  top: 100%;
-
-
 }
 
 .game-literal {
@@ -96,14 +115,10 @@ h4{
   font-size: 2rem;
 }
 
-.angled-div{
-  background-color: green;
-  border: 20px 20px 0 0;
-}
-
 .instruction{
   height: 80vh;
   background-color: purple;
+  margin-top: 20rem
 }
 
 .below-instructions{
