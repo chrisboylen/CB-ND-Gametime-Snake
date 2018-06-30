@@ -1,7 +1,14 @@
+@font-face {
+  font-family: "newyorkescape";
+  src: url(fonts/newyorkescape.tff);
+}
+
+
+
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "newyorkescape";
   box-sizing: border-box;
 }
 
@@ -49,12 +56,19 @@
 }
 
 .scoreboard{
-  font-size: 5rem;
+  font-size: 3rem;
   display: inline-block;
+  font: url('font/newyorkescape.tff');
+  color: white;
 }
 
-.scoreboard h1{
+.score-actual{
+  margin-top: 8rem;
   font-size: 12rem;
+}
+
+.top-player{
+  font-size: 5rem;
 }
 
 .landing-page{
@@ -105,7 +119,7 @@
 
 
 .game-literal {
-  background: center url('/img/asphalt.jpg');
+  /* background: center url('/img/asphalt.jpg'); */
 }
 
 h4{
