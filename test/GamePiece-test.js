@@ -39,13 +39,4 @@ describe('GamePiece', () => {
     const isColliding = gamePiece.isCollidingWith(gamePiece2);
     expect(isColliding).to.be.false;
   });
-
-  it('Should have a move method', () => {
-    gamePiece.move();
-    
-    const actualState = gamePiece.x;
-    const expectedState = 51.5;
-
-    expect(actualState).equal(expectedState);
-  })
 });
