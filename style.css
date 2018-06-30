@@ -90,7 +90,6 @@
   transform: skewY(-9deg);
 }
 
-
 .how-to-play{
   /* background: red; */
   display: grid;
@@ -126,15 +125,26 @@ h4{
 }
 
 .instruction{
-  height: 80vh;
   background-color: white;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+.instruction:before{
+  content: 'How to Play';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 7rem;
+  text-decoration: underline;
+}
+
+.lore{
+  margin-top: 6rem;
 }
 
 .below-instructions{
   height: 40vh;
-}
-
-.instruction{
-background-color: red;
-margin-top: 2rem;
 }
