@@ -1,0 +1,188 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+.header{ 
+  background-color: rgb(59, 59, 59);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.header li{
+  display: inline-block;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+  position: relative;
+}
+
+.special-li:after{
+  content: '';
+  width: .2rem;
+  background: red;
+  position: absolute;
+  height: 100%;
+  right: -.50rem;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20rem;
+}
+
+.logo:before {
+  /* add shiny special button here */
+}
+
+#game{
+  border: 1px solid #DB3A8B
+}
+
+.scoreboard{
+  /* background: red; */
+  text-align: center;
+}
+
+.scoreboard{
+  font-size: 5rem;
+  display: inline-block;
+}
+
+.scoreboard h1{
+  font-size: 12rem;
+}
+
+.landing-page{
+  background: no-repeat center url('/img/wallpaper.jpg');
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  position: relative;
+  height: 110vh;
+  /* overflow: hidden; */
+}
+
+
+.landing-page:before{
+  content: '';
+  position: absolute;
+  background: rgb(255, 255, 255);
+  height: 20%;
+  width: 50%;
+  top: 90%;
+  transform-origin: right;
+  transform: skewY(9deg);
+}
+
+.landing-page:after{
+  content: '';
+  position: absolute;
+  background: rgb(255, 255, 255);
+  height: 20%;
+  width: 50%;
+  top: 83.7%;
+  right: 0%;
+  transform-origin: bottom center;
+  transform: skewY(-9deg);
+}
+
+.how-to-play{
+  /* background: red; */
+  display: grid;
+  grid-template-rows: 10rem 10rem 2rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.how-to-play img{
+  margin-top: 6rem;
+  background-color: red;
+}
+
+
+.game-literal {
+  background: center url('/img/asphalt.jpg');
+}
+
+h4{
+  text-align: center;
+  margin-top: 6rem;
+  background-color: yellow;
+  font-size: 2rem;
+}
+
+.text-divider{
+  background-color: white;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+}
+
+
+.text-divider:before{
+  content: 'How to Play';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+  text-decoration: underline;
+}
+
+.divider-title{
+  margin-top: 6rem;
+}
+
+.snake-face{
+  float: left;
+  height: 25rem;
+  margin: 5rem 0 0 1rem;
+}
+
+.lore{
+  display: grid;
+  grid-template-columns: 30rem 30rem;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.lore :nth-child(2){
+  background-color: grey;
+}
+
+.lore h2{
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+
+footer{
+  text-align: center;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  justify-content: space-around;
+  margin-top: 4rem;
+
+}
+
+.rounded-image{
+  margin-top: 2rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 4rem;
+  position: relative;
+  border: 10px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(#bdc3c7, #2c3e50);
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+}
+
+/* Flip effect */
+
