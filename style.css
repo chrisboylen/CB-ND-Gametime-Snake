@@ -1,11 +1,30 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
 }
 
-.landing {
+.header{ 
+  background-color: rgb(59, 59, 59);
+  text-align: center;
+}
 
+.header li{
+  display: inline-block;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  margin-bottom: .2rem;
+  position: relative;
+}
+
+.special-li:after{
+  content: '';
+  width: .2rem;
+  background: red;
+  position: absolute;
+  height: 100%;
+  right: -.50rem;
 }
 
 .logo {
@@ -13,4 +32,12 @@
   margin-left: auto;
   margin-right: auto;
   width: 20rem;
+}
+
+.logo:before {
+  /* add shiny special button here */
+}
+
+#game{
+  border: 1px solid #DB3A8B
 }
