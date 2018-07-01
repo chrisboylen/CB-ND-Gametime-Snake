@@ -1,14 +1,64 @@
+
 *{
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "newyorkescape";
   box-sizing: border-box;
 }
 
+.main-page{
+  background: no-repeat fixed url('/img/new-wallpaper.jpg');
+  background-size: cover;
+}
+
 .header{ 
-  background-color: rgb(59, 59, 59);
-  text-align: center;
   padding-bottom: 1rem;
+  margin-bottom: .5rem;
+  text-align: center;
+}
+
+.header-box{
+  text-align: left;
+  display: block;
+  margin-left: 32rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.new-york{
+  position: relative;
+}
+
+.new-york:before{
+  content: 'from';
+  position: absolute;
+  transition: 300ms ease-in-out;
+  height: 60%;
+  bottom: 3rem;
+  border-bottom: 2px solid red;
+  border-top: 2px solid red;
+  left: 16rem;
+  width:14%;
+  font-size: 1.5rem;
+}
+
+
+.info-box{
+  margin-top: 9rem;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+
+.header h1{
+  font-size: 3rem;
+  color: red;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.header-box :nth-child(2){
+  letter-spacing: .8rem;
 }
 
 .header li{
@@ -17,6 +67,15 @@
   text-transform: uppercase;
   margin-bottom: .2rem;
   position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  font-family: 'Montserrat';
+  cursor: pointer;
+  z-index: 1;
+}
+
+.header li:hover {
+  text-decoration: underline;
 }
 
 .special-li:after{
@@ -28,50 +87,65 @@
   right: -.50rem;
 }
 
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20rem;
-}
-
-.logo:before {
-  /* add shiny special button here */
-}
-
 #game{
-  border: 1px solid #DB3A8B
+  border: 1px solid red;
 }
 
 .scoreboard{
-  /* background: red; */
-  text-align: center;
-}
-
-.scoreboard{
-  font-size: 5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
   display: inline-block;
+  font: url('font/newyorkescape.tff');
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
 }
 
-.scoreboard h1{
+.score-actual{
+  margin-top: 6rem;
   font-size: 12rem;
+  text-shadow: 2px 2px 4px #000000;
+  position: relative;
+  z-index: 2;
 }
+
+.score-actual:after{
+  content: '';
+  position: absolute;
+  background: red;
+  height: 40%;
+  top: 5rem;
+  left: 1.5rem;
+  width: 90%;
+  text-shadow: 2px 2px 4px #000000;
+  transform: skewY(9deg);
+  z-index: -1;
+}
+
+.top-player{
+  font-size: 5rem;
+  letter-spacing: 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* DIAMOND DIV START */
+
 
 .landing-page{
-  background: no-repeat center url('/img/wallpaper.jpg');
   display: grid;
   grid-template-columns: 30rem 30rem 30rem;
   position: relative;
-  height: 110vh;
+  height: 105vh;
   /* overflow: hidden; */
 }
-
 
 .landing-page:before{
   content: '';
   position: absolute;
   background: rgb(255, 255, 255);
-  height: 20%;
+  height: 28%;
   width: 50%;
   top: 90%;
   transform-origin: right;
@@ -82,64 +156,83 @@
   content: '';
   position: absolute;
   background: rgb(255, 255, 255);
-  height: 20%;
+  height: 28%;
   width: 50%;
-  top: 83.7%;
+  top: 83.5%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
 }
 
+/* ----------page 2----------- */
+
 .how-to-play{
-  /* background: red; */
-  display: grid;
-  grid-template-rows: 10rem 10rem 2rem;
-  justify-content: center;
+  text-align : center;
   overflow: hidden;
+  color: white;
+  transition: all 300ms ease-in;
 }
 
-.how-to-play img{
-  margin-top: 6rem;
-  background-color: red;
+.special-hover{
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #000000;
 }
 
+.special-hover:before{
+  content: '';
+  position: absolute;
+  background: red;
+  height: 100%;
+  width: auto;
+  z-index: -1;
+}
+
+.special-hover:hover:before{
+  width:10%;
+  left: 2rem;
+  border-radius: 50%;
+}
 
 .game-literal {
-  background: center url('/img/asphalt.jpg');
+  text-align: center;
 }
+
+.game-literal:after{
+  content: ' v ';
+  font-family: 'Montserrat';
+   height: 100%;
+   text-align: center;
+   left: 20rem;
+   width: 100%;
+   font-size: 3rem;
+   color: white;
+}
+
 
 h4{
   text-align: center;
-  margin-top: 6rem;
-  background-color: yellow;
+  margin-top: 2rem;
   font-size: 2rem;
 }
 
 .text-divider{
   background-color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   position: relative;
 }
 
-
-.text-divider:before{
-  content: 'How to Play';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 5rem;
-  text-decoration: underline;
-}
-
 .divider-title{
-  margin-top: 6rem;
+  margin-top: -2rem;
+  border-bottom: 3px solid red;
+  display: inline-block;
 }
 
 .snake-face{
   float: left;
-  height: 25rem;
+  height: 25rem; 
   margin: 5rem 0 0 1rem;
 }
 
@@ -149,38 +242,95 @@ h4{
   justify-content: space-around;
   text-align: center;
   margin-top: 5rem;
+  color: white;
+  text-transform: uppercase;
+  
 }
 
-.lore :nth-child(2){
-  background-color: grey;
+.descriptive-text{
+  background-color: rgba(0, 0, 0, 0.822);
+  z-index: 2;
+  border-top: 4px solid red;
+  margin-bottom: 5rem;
 }
 
-.lore h2{
+.descriptive-text h2{
   margin-top: 2rem;
   font-size: 3rem;
+  padding: 1rem;
+  font-family: 'Montserrat';
+  letter-spacing: .5rem;
+  text-align: left;
 }
 
+.descriptive-text h3{
+  margin-top: 2rem;
+  font-family: 'Montserrat';
+}
+
+
+.fa-caret-right{
+  font-size: 3rem;
+  color: rgb(250, 0, 0);
+  cursor: pointer;
+}
+
+.slanted{
+  position: relative;
+}
+
+.slanted:before{
+  content: '';
+  position: absolute;
+  width: 110vw;
+  height: 35rem;
+  left: -10rem;
+  top: 0rem;
+  background: no-repeat fixed url('/img/artist.jpg');
+  background-size: center;
+  background-color: black;
+  transform: skewY(-5deg);
+}
+
+.sneak{
+  height: 40rem;
+  z-index: 100;
+}
+
+.credits {
+  margin-top: 10rem;
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.credits h1{
+  border-bottom: 5px solid red;
+  display: inline-block;
+}
 
 footer{
   text-align: center;
-  background-color: red;
   display: grid;
   grid-template-columns: 20rem 20rem;
   justify-content: space-around;
-  margin-top: 4rem;
+  margin-top: 8rem;
+}
 
+footer h2{
+  font-family: 'Montserrat';
 }
 
 .rounded-image{
   margin-top: 2rem;
   height: 10rem;
   border-radius: 50%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   position: relative;
   border: 10px solid transparent;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#bdc3c7, #2c3e50);
+  background-image: linear-gradient(#fff, #fff),                                linear-gradient(#bdc3c7, #2c3e50);
   box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
 }
 

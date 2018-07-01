@@ -7,49 +7,69 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
 </head>
 
 <body>
-  <section class="header">
-    <img class="logo" src="img/logo.png" alt="The Escape from New York logo">
-    <li class="special-li">Main</li>
-    <li class="special-li">How to Play</li>
-    <li>Credits</li>
-  </section>
   <!-- Landing -->
-  <section class="landing-page">
+
+  <section class="main-page">
+      <section class="header">
+        <div class ="header-box">
+          <h1>Escape</h1>
+          <h1 class="new-york">New York</h1>
+       </div>
+        <li class="special-li">Main</li>
+        <li class="special-li">Lore</li>
+        <li>Credits</li>
+      </section>
+    <section class="landing-page">
       <section class="scoreboard">
         <h3 class=">top-score">Top Score</h3>
         <h1 class="score-actual">92</h1>
         <h1 class="top-player">Nick</h1>
       </section>
       <section class="game-literal">
+
         <!-- WARNING CANVAS -->
         <canvas id="game" tabindex=0 width="400" height="600"></canvas>
         <!-- END CANVAS -->
+
       </section>
       <section class="how-to-play">
-        <h4>New Game</h4>
-        <h4>Options</h4>
-        <img src="img/arrow-keys.png" alt="">
+        <h4 class="special-hover">New Game</h4>
+        <h4 class="special-hover">Options</h4>
+        <section class="info-box">
+         <h1>?</h1>
+        </section>
       </section>
+    </section>
   </section>
 <!-- end Landing -->
-<!-- instructions -->
+
+<!-- diamond divider -->
 <section class="text-divider">
   <h3 class="divider-title">Escape From New York</h3>
 </section>
+
+<!-- Lore  -->
 <section class="lore">
-  <section class="img-carousel"> auto playing Image coursel</section>
+  <section class="slanted"></section>
   <section class="descriptive-text">
     <h2>New York, 1997</h2>
-    <h2>Manhattan is a maximum security prison</h2>
-    <h2>Breaking out is impossible, but breaking in is insane!</h2>
-    <p>this is also an auto-playing text-carousel</p>
+    <h3>The President is being held hostage in Manhattan, now a maximum security prison</h3>
+    <h3>Play as Snake Plisken as you infiltrate the island and rescue the President to earn your freedom!</h3>
+    <i class="fas fa-caret-right"></i>
   </section>
 </section>
 
 <!-- end instructions -->
+
+<section class="credits">
+    <h1>Credits</h1>
+</section>
+
 <!-- footer -->
 <footer class="below-instructions">
   <section class="chris">
@@ -60,10 +80,11 @@
   <section class="nick">
     <h1>Nick D'Ambrosio</h1>
     <h2>Front-End Developer</h2>
-    <img class = "nick-i rounded-image"src="img/nick.jpg" alt="">
+    <img class = "nick-i rounded-image"src="img/nick.jpg">
   </section>
 </footer>
 <!-- end footer -->
+
   <script src="main.bundle.js"></script>
 </body>
 </html>
