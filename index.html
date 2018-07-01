@@ -10,17 +10,16 @@
 
 
 </head>
-
 <body>
   <section class="main-page">
       <section class="header">
         <div class ="header-box">
           <h1>Escape</h1>
           <h1 class="new-york">New York</h1>
-       </div>
-        <li class="special-li">Main</li>
-        <li class="special-li">Lore</li>
-        <li>Credits</li>
+        </div>
+        <li class="special-li"><a href="#lore">Lore</a></li>
+        <li class="special-li view-scoreboard">Scores</li>
+        <li><a href="#madeby">Credits</a></li>
       </section>
     <section class="landing-page">
       <section class="scoreboard">
@@ -29,15 +28,19 @@
         <h1 class="top-player">nick</h1>
       </section>
       <section class="game-literal">
+          <div class="score-overlay">
+              <h2>Leaderboard</h2>
+          </div>
+
         <!-- WARNING CANVAS -->
         <canvas id="game" tabindex=0 width="400" height="600"></canvas>
+
         <!-- END CANVAS -->
       </section>
       <section class="how-to-play">
         <h4 class="special-hover">New Game</h4>
         <h4 class="special-hover">How to Play</h4>
-        <article class="instructions">
-        </article>
+        <i class="fas fa-caret-down"></i>
       </section>
         <section class="info-box">
          <h1>?</h1>
@@ -48,7 +51,7 @@
 
 <!-- diamond divider -->
 <section class="text-divider">
-  <h3 class="divider-title">Escape From New York</h3>
+  <h3 class="divider-title" id="lore">Escape From New York</h3>
 </section>
 
 <!-- Lore  -->
@@ -56,21 +59,20 @@
   <section class="slanted"></section>
   <section class="descriptive-text">
     <div class="descriptive-overlay">
-        <h2>Controls</h2>
-        <h3>Use the arrow keys to move your character around</h3>
-        <h3>Rescue as many innocents as you can and escape to the helicopter to progress to the next level!</h3>
+        <h2>Call me Snake</h2>
+        <h3>Former Special Forces operator/War Hero in World War III- turned criminal, Snake is on a mission that will gain him a presidential pardon.</h3>
         <i class="close-instructions fas fa-caret-left"></i>
     </div>
     <h2>New York, 1997</h2>
     <h3>The President is being held hostage in Manhattan, which is now a maximum security prison</h3>
-    <h3>Play as Snake Plisken as you infiltrate the island and rescue the President to earn your freedom!</h3>
+    <h3>Play as Snake Plissken as you infiltrate the island and rescue the President to earn your freedom!</h3>
     <i class="open-instructions fas fa-caret-right"></i>
   </section>
 </section>
 
 <!-- end instructions -->
 
-<section class="credits">
+<section class="credits" id="madeby">
     <h1>Credits</h1>
 </section>
 

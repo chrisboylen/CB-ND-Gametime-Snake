@@ -61,9 +61,9 @@
   letter-spacing: .8rem;
 }
 
-.header li{
+.header li, a{
   display: inline-block;
-  padding: 0 2rem;
+  padding: 0 1rem;
   text-transform: uppercase;
   margin-bottom: .2rem;
   position: relative;
@@ -72,9 +72,10 @@
   font-family: 'Montserrat';
   cursor: pointer;
   z-index: 1;
+  text-decoration: none;
 }
 
-.header li:hover {
+.header a:hover {
   color: white;
 }
 
@@ -162,18 +163,40 @@
 
 .game-literal {
   text-align: center;
+  position: relative;
 }
 
 .game-literal:after{
   content: ' v ';
   font-family: 'Montserrat';
-   height: 100%;
+   top: 100;
    text-align: center;
    left: 20rem;
    width: 100%;
    font-size: 3rem;
    color: white;
    cursor: pointer;
+}
+
+.score-overlay{
+  height: 606px;
+  width: 406px;
+  left: 2.3rem;
+  font-size: 1rem;
+  position: absolute;
+  border: 4px solid rgb(255, 0, 0);
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.521);
+  text-transform: uppercase;
+  -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition:         all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  bottom: 50rem;
+}
+
+.score-overlay h2{
+  font-family: 'Montserrat';
+  color: white;
+  letter-spacing: .5rem;
 }
 
 /* DIAMOND DIV START */
@@ -210,6 +233,10 @@ h4{
   font-size: 2rem;
 }
 
+.fa-caret-down{
+  display: block;
+}
+
 .text-divider{
   background-color: white;
   text-align: center;
@@ -221,13 +248,6 @@ h4{
   margin-top: -2rem;
   border-bottom: 3px solid red;
   display: inline-block;
-}
-
-
-.snake-face{
-  float: left;
-  height: 25rem; 
-  margin: 5rem 0 0 1rem;
 }
 
 .lore{
@@ -248,13 +268,13 @@ h4{
   margin-bottom: 5rem;
   position: relative;
   overflow: hidden;
+  font-family: 'Montserrat';
 }
 
 .descriptive-text h2{
   margin-top: 2rem;
   font-size: 3rem;
   padding: 1rem;
-  font-family: 'Montserrat';
   letter-spacing: .5rem;
   text-align: left;
 }
@@ -282,7 +302,7 @@ h4{
 }
 
 .descriptive-overlay h3{
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 
@@ -337,6 +357,17 @@ footer{
   justify-content: space-around;
   margin-top: 8rem;
 }
+
+.chris h1, .nick h1{
+  position: relative;
+  cursor: pointer;
+  border-top: 5px solid transparent;
+}
+
+.chris h1:hover, .nick h1:hover{
+  border-top: 5px solid red;
+}
+
 
 footer h2{
   font-family: 'Montserrat';
