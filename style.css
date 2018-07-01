@@ -213,14 +213,14 @@
 
 h4{
   text-align: center;
-  margin-top: 6rem;
+  margin-top: 2rem;
   font-size: 2rem;
 }
 
 .text-divider{
   background-color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 3rem;
   position: relative;
 }
 
@@ -253,19 +253,40 @@ h4{
   text-align: center;
   margin-top: 5rem;
   color: white;
+  text-transform: uppercase;
+  
 }
 
-.lore :nth-child(2){
-  background-color: rgb(0, 0, 0);
+.descriptive-text{
+  background-color: rgba(0, 0, 0, 0.822);
   z-index: 2;
-  overflow: scroll;
+  position: relative;
 }
 
-.lore h2{
+.descriptive-text h2{
   margin-top: 2rem;
   font-size: 3rem;
+  padding: 1rem;
+  font-family: 'Montserrat';
+  letter-spacing: .5rem;
+  text-align: left;
+
 }
 
+.descriptive-text:before{
+  content: '';
+  border-top: 3px solid rgb(255, 0, 0);
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.fa-caret-right{
+  font-size: 10rem;
+  color: white;
+}
 
 .slanted{
   position: relative;
@@ -277,7 +298,7 @@ h4{
   width: 110vw;
   height: 35rem;
   left: -10rem;
-  top: 2rem;
+  top: 0rem;
   background: no-repeat fixed url('/img/artist.jpg');
   background-size: inherit;
   background-color: black;
@@ -287,7 +308,6 @@ h4{
 
 footer{
   text-align: center;
-  background-color: red;
   display: grid;
   grid-template-columns: 20rem 20rem;
   justify-content: space-around;
@@ -302,7 +322,7 @@ footer h2{
   margin-top: 2rem;
   height: 10rem;
   border-radius: 50%;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   position: relative;
   border: 10px solid transparent;
   background-clip: padding-box, border-box;
