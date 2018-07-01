@@ -45,12 +45,9 @@
 
 
 .info-box{
-  /* display: inline-block; */
   margin-top: 9rem;
   font-size: 5rem;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
 }
 
 
@@ -133,11 +130,14 @@
   z-index: 1;
 }
 
+/* DIAMOND DIV START */
+
+
 .landing-page{
   display: grid;
   grid-template-columns: 30rem 30rem 30rem;
   position: relative;
-  height: 110vh;
+  height: 105vh;
   /* overflow: hidden; */
 }
 
@@ -145,7 +145,7 @@
   content: '';
   position: absolute;
   background: rgb(255, 255, 255);
-  height: 20%;
+  height: 28%;
   width: 50%;
   top: 90%;
   transform-origin: right;
@@ -156,9 +156,9 @@
   content: '';
   position: absolute;
   background: rgb(255, 255, 255);
-  height: 20%;
+  height: 28%;
   width: 50%;
-  top: 83.7%;
+  top: 83.5%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
@@ -178,23 +178,21 @@
   z-index: 1;
   cursor: pointer;
   text-shadow: 2px 2px 4px #000000;
-  transition: all 300ms ease-in;
 }
 
 .special-hover:before{
   content: '';
   position: absolute;
   background: red;
-  height: 60%;
-  top: 0rem;
-  left: 0;
-  width: 0%;
+  height: 100%;
+  width: auto;
   z-index: -1;
 }
 
 .special-hover:hover:before{
-  transform: skewY(6deg);
-  width:100%;
+  width:10%;
+  left: 2rem;
+  border-radius: 50%;
 }
 
 .game-literal {
@@ -235,7 +233,7 @@ h4{
   font-family: 'Montserrat';
   right: 0;
   bottom: 5rem;
-  text-decoration: underline;
+
 }
 
 .divider-title{
@@ -244,7 +242,7 @@ h4{
 
 .snake-face{
   float: left;
-  height: 25rem;
+  height: 25rem; 
   margin: 5rem 0 0 1rem;
 }
 
@@ -254,15 +252,36 @@ h4{
   justify-content: space-around;
   text-align: center;
   margin-top: 5rem;
+  color: white;
 }
 
 .lore :nth-child(2){
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
+  z-index: 2;
+  overflow: scroll;
 }
 
 .lore h2{
   margin-top: 2rem;
   font-size: 3rem;
+}
+
+
+.slanted{
+  position: relative;
+}
+
+.slanted:before{
+  content: '';
+  position: absolute;
+  width: 110vw;
+  height: 35rem;
+  left: -10rem;
+  top: 2rem;
+  background: no-repeat fixed url('/img/artist.jpg');
+  background-size: inherit;
+  background-color: black;
+  transform: skewY(-5deg);
 }
 
 
@@ -272,7 +291,7 @@ footer{
   display: grid;
   grid-template-columns: 20rem 20rem;
   justify-content: space-around;
-  margin-top: 4rem;
+  margin-top: 8rem;
 }
 
 footer h2{
@@ -288,7 +307,7 @@ footer h2{
   border: 10px solid transparent;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  background-image: linear-gradient(#fff, #fff), linear-gradient(#bdc3c7, #2c3e50);
+  background-image: linear-gradient(#fff, #fff),                                linear-gradient(#bdc3c7, #2c3e50);
   box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
 }
 
