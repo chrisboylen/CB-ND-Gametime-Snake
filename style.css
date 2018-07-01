@@ -67,7 +67,7 @@
   text-transform: uppercase;
   margin-bottom: .2rem;
   position: relative;
-  color: white;
+  color: rgb(195, 195, 195);
   text-shadow: 2px 2px 4px #000000;
   font-family: 'Montserrat';
   cursor: pointer;
@@ -75,7 +75,7 @@
 }
 
 .header li:hover {
-  text-decoration: underline;
+  color: white;
 }
 
 .special-li:after{
@@ -88,7 +88,7 @@
 }
 
 #game{
-  border: 1px solid red;
+  border: 3px solid red;
 }
 
 .scoreboard{
@@ -101,10 +101,19 @@
   text-shadow: 2px 2px 4px #000000;
 }
 
+.top-score{
+  color: rgb(195, 195, 195);
+}
+
+.top-score:hover{
+  cursor: pointer;
+  color: white;
+}
+
 .score-actual{
   margin-top: 6rem;
-  font-size: 12rem;
-  text-shadow: 2px 2px 4px #000000;
+  font-size: 8rem;
+  text-shadow: 2px 2px 4px #00000093;
   position: relative;
   z-index: 2;
 }
@@ -114,9 +123,9 @@
   position: absolute;
   background: red;
   height: 40%;
-  top: 5rem;
-  left: 1.5rem;
-  width: 90%;
+  top: 3rem;
+  left: 7.5rem;
+  width: 50%;
   text-shadow: 2px 2px 4px #000000;
   transform: skewY(9deg);
   z-index: -1;
@@ -130,16 +139,44 @@
   z-index: 1;
 }
 
-/* DIAMOND DIV START */
-
-
 .landing-page{
   display: grid;
   grid-template-columns: 30rem 30rem 30rem;
   position: relative;
-  height: 105vh;
-  /* overflow: hidden; */
 }
+
+/* How to play */
+
+.special-hover{
+  text-align : center;
+  overflow: hidden;
+  color: rgb(202, 202, 202);
+  cursor: pointer;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.special-hover:hover{
+  color: white;
+}
+
+
+.game-literal {
+  text-align: center;
+}
+
+.game-literal:after{
+  content: ' v ';
+  font-family: 'Montserrat';
+   height: 100%;
+   text-align: center;
+   left: 20rem;
+   width: 100%;
+   font-size: 3rem;
+   color: white;
+   cursor: pointer;
+}
+
+/* DIAMOND DIV START */
 
 .landing-page:before{
   content: '';
@@ -158,57 +195,13 @@
   background: rgb(255, 255, 255);
   height: 28%;
   width: 50%;
-  top: 83.5%;
+  top: 83.6%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
 }
 
-/* ----------page 2----------- */
-
-.how-to-play{
-  text-align : center;
-  overflow: hidden;
-  color: white;
-  transition: all 300ms ease-in;
-}
-
-.special-hover{
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.special-hover:before{
-  content: '';
-  position: absolute;
-  background: red;
-  height: 100%;
-  width: auto;
-  z-index: -1;
-}
-
-.special-hover:hover:before{
-  width:10%;
-  left: 2rem;
-  border-radius: 50%;
-}
-
-.game-literal {
-  text-align: center;
-}
-
-.game-literal:after{
-  content: ' v ';
-  font-family: 'Montserrat';
-   height: 100%;
-   text-align: center;
-   left: 20rem;
-   width: 100%;
-   font-size: 3rem;
-   color: white;
-}
+/* Page 2 */
 
 
 h4{
@@ -229,6 +222,7 @@ h4{
   border-bottom: 3px solid red;
   display: inline-block;
 }
+
 
 .snake-face{
   float: left;
@@ -275,6 +269,10 @@ h4{
   cursor: pointer;
 }
 
+.fa-caret-right:hover{
+  transform: scale(1.2)
+}
+
 .slanted{
   position: relative;
 }
@@ -282,7 +280,7 @@ h4{
 .slanted:before{
   content: '';
   position: absolute;
-  width: 110vw;
+  width: 92.5rem;
   height: 35rem;
   left: -10rem;
   top: 0rem;
