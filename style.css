@@ -278,6 +278,9 @@ Lore (Page 2)                          >
   margin-bottom: 2rem;
 }
 
+.descriptive-overlay h4{
+  font-size: 2rem;
+}
 .fa-caret-right, .fa-caret-left{
   color: rgb(250, 0, 0);
   cursor: pointer;
@@ -319,7 +322,7 @@ Credits (Page 3)                       >
 .credits-text:after{
   position: absolute;
   content: '#1804SuperHot🔥';
-  font-size: 3rem;
+  font-size: 2rem;
   width: 200%;
   height: 150%;
   left: -7.5rem;
