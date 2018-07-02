@@ -35,6 +35,14 @@
       <!-- Middle Column -->
       <section class="game-literal">
         <canvas id="game" tabindex=0 width="400" height="600"></canvas>
+        <section class="game-over">
+          <h2 class="game-over-text">MISSION FAILED</h2>
+          <h5 class="retry-button"><i class="fas fa-caret-right"></i>Retry?</h5>
+          <section class="input-your-score">
+            <input type="text" class="player-score-input">
+          </section>
+
+        </section>
       </section>
       <!-- Right Column -->
       <section class="game-info">
@@ -42,8 +50,8 @@
       </section>
       <!-- Back to first Column -->
       <section class='player-ui'>
-        <li class='player-level'>Level: <span>0</span></li> 
-        <li>Lives Remaining: <span>3</span></li>
+        <li class='player-level'>Score: <span class="level-actual">0</span></li> 
+        <li>Lives Remaining: <span class="lives">3</span></li>
       </section>
       <section class="audio">
       </section>

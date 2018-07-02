@@ -20,9 +20,9 @@
   position: relative;
 }
 
-/* ===================================\
-Header                                 >
-/* ================================= */
+       /* ===================================\
+/* Header                                    >
+      /* ================================= */
 
 .header{
   margin-bottom: .5rem;
@@ -80,13 +80,12 @@ Header                                 >
   text-transform: uppercase;
 }
 
-/* ===================================\
-Left-Column                            >
-/* ================================= */
+       /* ===================================\
+/* Left-Column                               >
+      /* ================================= */
 
 .scoreboard{
   font-size: 2rem; 
-  font: url('font/newyorkescape.tff');
   margin-top: 2rem;
   text-align: center;
   text-shadow: 2px 2px 4px #000000c7;
@@ -174,10 +173,11 @@ Left-Column                            >
   margin-right: 2rem;
 }
 
-/* ===================================\
-Middle-Column                          >
-/* ================================= */
+       /* ===================================\
+/* Middle-Column                              >
+      /* ================================= */
 
+      
 .game-literal {
   text-align: center;
   position: relative;
@@ -188,9 +188,47 @@ Middle-Column                          >
   border: 3px solid red;
 }
 
-/* ===================================\
-Right-Column                           >
-/* ================================= */
+.game-over{
+  position: absolute;
+  bottom: 15rem;
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  visibility: hidden;
+}
+
+.game-over-text{
+  margin-bottom: 1rem;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+  transition: .5s; 
+}
+
+.game-over h5{
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.527);
+  transition: .5s; 
+}
+
+.game-over i{
+  opacity: 0;
+  transition: .5s; 
+  font-size: 2rem;
+}
+
+.game-over h5:hover{
+  color: white;
+}
+
+.game-over:hover i{
+  opacity: 1;
+}
+
+.player-score-input{
+  margin-top: 5rem;
+}
+
+       /* ===================================\
+/* Right-Column                              >
+      /* ================================= */
 
 .game-info h4{
   margin-top: 2rem;
@@ -219,9 +257,9 @@ Right-Column                           >
   position: relative;
 }
 
-/* ===================================\
-Lore (Page 2)                          >
-/* ================================= */
+       /* ===================================\
+/* Lore (2)                                   >
+      /* ================================= */
 
 
 .lore{
@@ -308,9 +346,9 @@ Lore (Page 2)                          >
 }
 
 
-/* ===================================\
-Credits (Page 3)                       >
-/* ================================= */
+       /* ===================================\
+/* Credits (Page 3)                           >
+      /* ================================= */
 
 .snake-tattoo{
   display: block;
@@ -401,6 +439,6 @@ footer h2{
   color: red;
 }
 
-/* ===================================\
-End of Styles ~~~~~~~~~~~~~~~~~~~      >
-/* ================================= */
+       /* ===================================\
+/* End of Styles~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ >
+      /* ================================= */
