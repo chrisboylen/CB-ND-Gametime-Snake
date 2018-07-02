@@ -1,9 +1,11 @@
 
 *{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "newyorkescape";
-  box-sizing: border-box;
+  color: rgb(228, 228, 228);
+  border: red;
 }
 
 .main-page{
@@ -11,19 +13,28 @@
   background-size: cover;
 }
 
-.header{ 
-  padding-bottom: 1rem;
+.landing-page{
+  display: grid;
+  grid-template-columns: 30rem 30rem 30rem;
+  position: relative;
+}
+
+/* ===================================\
+Header                                 >
+/* ================================= */
+
+.header{
   margin-bottom: .5rem;
+  padding-bottom: 1rem;
   text-align: center;
 }
 
 .header-box{
-  text-align: left;
-  display: block;
-  margin-left: 32rem;
+  display: grid;
+  justify-content: center;
   margin-bottom: 1rem;
   position: relative;
-  overflow: hidden;
+  text-align: left;
 }
 
 .new-york{
@@ -31,94 +42,83 @@
 }
 
 .new-york:before{
-  content: 'from';
-  position: absolute;
-  transition: 300ms ease-in-out;
-  height: 60%;
   bottom: 3rem;
-  border-bottom: 2px solid red;
-  border-top: 2px solid red;
-  left: 16rem;
-  width:14%;
+  border-bottom: 2px solid;
+  border-top: 2px solid;
+  content: 'from';
   font-size: 1.5rem;
+  height: 55%;
+  left: 16rem;
+  position: absolute;
+  width:30%;
 }
-
-
-.info-box{
-  margin-top: 9rem;
-  font-size: 5rem;
-  cursor: pointer;
-}
-
 
 .header h1{
-  font-size: 3rem;
   color: red;
+  font-size: 3rem;
   text-shadow: 2px 2px 4px #000000;
 }
 
 .header-box :nth-child(2){
-  letter-spacing: .8rem;
+  letter-spacing: .5rem;
 }
 
-.header li{
-  display: inline-block;
-  padding: 0 2rem;
-  text-transform: uppercase;
-  margin-bottom: .2rem;
-  position: relative;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-  font-family: 'Montserrat';
+.main-nav{
+  display: grid;
+  grid-template-columns: 10rem 10rem 10rem;
+  justify-content: center;
+}
+
+.main-nav li, a{
   cursor: pointer;
-  z-index: 1;
+  display: inline-block;
+  font-family: 'Montserrat';
+  position: relative;
+  text-shadow: 2px 2px 4px #000000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.header li:hover {
-  text-decoration: underline;
-}
-
-.special-li:after{
-  content: '';
-  width: .2rem;
-  background: red;
-  position: absolute;
-  height: 100%;
-  right: -.50rem;
-}
-
-#game{
-  border: 1px solid red;
-}
+/* ===================================\
+Left-Column                            >
+/* ================================= */
 
 .scoreboard{
-  margin-top: 2rem;
-  font-size: 2rem;
-  display: inline-block;
+  font-size: 2rem; 
   font: url('font/newyorkescape.tff');
-  color: white;
+  margin-top: 2rem;
   text-align: center;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #000000c7;
+}
+
+.top-score{
+  letter-spacing: 1rem;
+}
+
+.top-score:hover{
+  cursor: pointer;
+  text-shadow: 0 0 3px rgb(255, 255, 255)
 }
 
 .score-actual{
+  font-size: 8rem;
+  text-shadow: 2px 2px 4px #00000093;
+  letter-spacing: 2rem;
   margin-top: 6rem;
-  font-size: 12rem;
-  text-shadow: 2px 2px 4px #000000;
   position: relative;
-  z-index: 2;
+  z-index: 2;  
 }
 
 .score-actual:after{
-  content: '';
-  position: absolute;
   background: red;
+  content: '';
   height: 40%;
-  top: 5rem;
-  left: 1.5rem;
-  width: 90%;
+  left: 5rem;
+  position: absolute;
   text-shadow: 2px 2px 4px #000000;
+  top: 3rem;
   transform: skewY(9deg);
+  width: 60%;
   z-index: -1;
 }
 
@@ -130,15 +130,19 @@
   z-index: 1;
 }
 
-/* DIAMOND DIV START */
+/* ===================================\
+Middle-Column                          >
+/* ================================= */
 
-
-.landing-page{
-  display: grid;
-  grid-template-columns: 30rem 30rem 30rem;
+.game-literal {
+  text-align: center;
   position: relative;
-  height: 105vh;
-  /* overflow: hidden; */
+  margin-bottom: 9rem
+}
+
+#game{
+  background: rgba(0, 0, 0, 0.644);
+  border: 3px solid red;
 }
 
 .landing-page:before{
@@ -147,7 +151,7 @@
   background: rgb(255, 255, 255);
   height: 28%;
   width: 50%;
-  top: 90%;
+  top: 98.6%;
   transform-origin: right;
   transform: skewY(9deg);
 }
@@ -158,58 +162,15 @@
   background: rgb(255, 255, 255);
   height: 28%;
   width: 50%;
-  top: 83.5%;
+  top: 90%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
 }
 
-/* ----------page 2----------- */
-
-.how-to-play{
-  text-align : center;
-  overflow: hidden;
-  color: white;
-  transition: all 300ms ease-in;
-}
-
-.special-hover{
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-.special-hover:before{
-  content: '';
-  position: absolute;
-  background: red;
-  height: 100%;
-  width: auto;
-  z-index: -1;
-}
-
-.special-hover:hover:before{
-  width:10%;
-  left: 2rem;
-  border-radius: 50%;
-}
-
-.game-literal {
-  text-align: center;
-}
-
-.game-literal:after{
-  content: ' v ';
-  font-family: 'Montserrat';
-   height: 100%;
-   text-align: center;
-   left: 20rem;
-   width: 100%;
-   font-size: 3rem;
-   color: white;
-}
-
+/* ===================================\
+Right-Column                           >
+/* ================================= */
 
 h4{
   text-align: center;
@@ -217,34 +178,35 @@ h4{
   font-size: 2rem;
 }
 
+/* ===================================\
+Text-Divider                           >
+/* ================================= */
+
 .text-divider{
   background-color: white;
   text-align: center;
   font-size: 3rem;
   position: relative;
+  margin-top: 5rem;
 }
 
 .divider-title{
-  margin-top: -2rem;
   border-bottom: 3px solid red;
   display: inline-block;
 }
 
-.snake-face{
-  float: left;
-  height: 25rem; 
-  margin: 5rem 0 0 1rem;
-}
+/* ===================================\
+Lore (Page 2)                          >
+/* ================================= */
+
 
 .lore{
   display: grid;
   grid-template-columns: 30rem 30rem;
   justify-content: space-around;
-  text-align: center;
   margin-top: 5rem;
-  color: white;
+  text-align: center;
   text-transform: uppercase;
-  
 }
 
 .descriptive-text{
@@ -252,13 +214,15 @@ h4{
   z-index: 2;
   border-top: 4px solid red;
   margin-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat';
 }
 
 .descriptive-text h2{
   margin-top: 2rem;
   font-size: 3rem;
   padding: 1rem;
-  font-family: 'Montserrat';
   letter-spacing: .5rem;
   text-align: left;
 }
@@ -268,11 +232,36 @@ h4{
   font-family: 'Montserrat';
 }
 
+.descriptive-overlay{
+  height: 100%;
+  width: 100%;
+  right: 500px;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 4px;
+  border-top: 4px solid red;
+  padding: .5rem;
+  text-align: center;
+  z-index: 5;
+  background-color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition:         all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
 
-.fa-caret-right{
+.descriptive-overlay h3{
+  margin-bottom: 2rem;
+}
+
+
+.fa-caret-right, .fa-caret-left{
   font-size: 3rem;
   color: rgb(250, 0, 0);
   cursor: pointer;
+}
+
+.fa-caret-right:hover, .fa-caret-left:hover{
+  text-shadow: 0 0 20px #FF0000
 }
 
 .slanted{
@@ -282,7 +271,7 @@ h4{
 .slanted:before{
   content: '';
   position: absolute;
-  width: 110vw;
+  width: 92.5rem;
   height: 35rem;
   left: -10rem;
   top: 0rem;
@@ -292,9 +281,15 @@ h4{
   transform: skewY(-5deg);
 }
 
-.sneak{
-  height: 40rem;
-  z-index: 100;
+/* ===================================\
+Credits (Page 3)                       >
+/* ================================= */
+
+
+.snake-tattoo{
+  display: block;
+  width: 10rem;
+  margin: 1rem auto;
 }
 
 .credits {
@@ -302,6 +297,7 @@ h4{
   font-size: 4rem;
   text-align: center;
   position: relative;
+  text-shadow: 2px 2px 4px #0000003a;
 }
 
 .credits h1{
@@ -312,9 +308,19 @@ h4{
 footer{
   text-align: center;
   display: grid;
-  grid-template-columns: 20rem 20rem;
+  grid-template-columns: 20rem 5rem 20rem;
   justify-content: space-around;
-  margin-top: 8rem;
+  margin-top: 5rem;
+}
+
+.chris h1, .nick h1{
+  position: relative;
+  cursor: pointer;
+  border-top: 5px solid transparent;
+}
+
+.back-to-top{
+  align-self: end;
 }
 
 footer h2{
@@ -333,6 +339,3 @@ footer h2{
   background-image: linear-gradient(#fff, #fff),                                linear-gradient(#bdc3c7, #2c3e50);
   box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
 }
-
-/* Flip effect */
-

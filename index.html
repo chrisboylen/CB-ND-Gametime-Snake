@@ -7,42 +7,41 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
-
 </head>
-
 <body>
-  <!-- Landing -->
-
   <section class="main-page">
-      <section class="header">
+      <section class="header" id class="top">
         <div class ="header-box">
           <h1>Escape</h1>
           <h1 class="new-york">New York</h1>
-       </div>
-        <li class="special-li">Main</li>
-        <li class="special-li">Lore</li>
-        <li>Credits</li>
+        </div>
+        <div class="main-nav">
+          <li class="special-li"><a href="#lore">Lore</a></li>
+          <li class="special-li view-scoreboard">Scores</li>
+          <li><a href="#madeby">Credits</a></li>
+        </div>
       </section>
+
     <section class="landing-page">
+      <!-- Left Column -->
       <section class="scoreboard">
-        <h3 class=">top-score">Top Score</h3>
+        <h3 class="top-score">Top Score</h3>
         <h1 class="score-actual">92</h1>
-        <h1 class="top-player">Nick</h1>
+        <h1 class="top-player">STK</h1>
       </section>
+      <!-- Middle Column -->
       <section class="game-literal">
-
-        <!-- WARNING CANVAS -->
         <canvas id="game" tabindex=0 width="400" height="600"></canvas>
-        <!-- END CANVAS -->
-
       </section>
-      <section class="how-to-play">
-        <h4 class="special-hover">New Game</h4>
-        <h4 class="special-hover">Options</h4>
-        <section class="info-box">
-         <h1>?</h1>
-        </section>
+      <!-- Right Column -->
+      <section class="game-info">
+        <h4 class="new-game">New Game</h4>
+      </section>
+      <!-- Back to first Column -->
+      <section class="player-ui">
+        <h1>Stats</h1>
+        <li>Level</li>
+        <li>Lives Remaining</li>
       </section>
     </section>
   </section>
@@ -50,23 +49,30 @@
 
 <!-- diamond divider -->
 <section class="text-divider">
-  <h3 class="divider-title">Escape From New York</h3>
+  <h3 class="divider-title" id="lore">Escape From New York</h3>
 </section>
 
 <!-- Lore  -->
 <section class="lore">
   <section class="slanted"></section>
   <section class="descriptive-text">
-    <h2>New York, 1997</h2>
-    <h3>The President is being held hostage in Manhattan, now a maximum security prison</h3>
-    <h3>Play as Snake Plisken as you infiltrate the island and rescue the President to earn your freedom!</h3>
-    <i class="fas fa-caret-right"></i>
+    <div class="descriptive-overlay">
+      <h2>Call me Snake</h2>
+      <h3>Former Special Forces operator/War Hero in World War III- turned criminal, Snake is on a mission that will gain him a presidential pardon.</h3>
+      <h4>Have fun!</h4>
+      <i class="close-instructions fas fa-caret-left"></i>
+    </div>
+      <h2>New York, 1997</h2>
+      <h3>The President is being held hostage in Manhattan, which is now a maximum security prison</h3>
+      <h3>Play as Snake Plissken as you infiltrate the island and rescue the President to earn your freedom!</h3>
+      <i class="open-instructions fas fa-caret-right"></i>
   </section>
 </section>
 
 <!-- end instructions -->
 
-<section class="credits">
+<section class="credits" id="madeby">
+    <img class="snake-tattoo" src="img/sneak.png" alt="">
     <h1>Credits</h1>
 </section>
 
@@ -75,16 +81,22 @@
   <section class="chris">
     <h1>Chris Boylen</h1>
     <h2>Front-End Developer</h2>
-    <img class="chris-i rounded-image" src="img/chris.jpg" alt="">
+    <img class="rounded-image" src="img/chris.jpg" alt="">
+  </section>
+  <section class="back-to-top">
+      <a href="#top"><i class="fas fa-caret-up"></i></a>
   </section>
   <section class="nick">
     <h1>Nick D'Ambrosio</h1>
     <h2>Front-End Developer</h2>
-    <img class = "nick-i rounded-image"src="img/nick.jpg">
+    <img class = "rounded-image"src="img/nick.jpg">
   </section>
 </footer>
-<!-- end footer -->
 
+<!-- end footer -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="main.bundle.js"></script>
+  <script src="stylescript.js"></script>
 </body>
 </html>
+
