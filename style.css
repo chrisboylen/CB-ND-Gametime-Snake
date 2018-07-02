@@ -37,11 +37,11 @@ Header                                 >
   text-align: left;
 }
 
-.new-york🦄{
+.new-york{
   position: relative;
 }
 
-.new-york🦄:before{
+.new-york:before{
   bottom: 3rem;
   border-bottom: 2px solid;
   border-top: 2px solid;
@@ -100,7 +100,7 @@ Left-Column                            >
   text-shadow: 0 0 3px rgb(255, 255, 255)
 }
 
-.score-actual🦄{
+.score-actual{
   font-size: 8rem;
   text-shadow: 2px 2px 4px #00000093;
   letter-spacing: 2rem;
@@ -109,7 +109,7 @@ Left-Column                            >
   z-index: 2;  
 }
 
-.score-actual🦄:after{
+.score-actual:after{
   background: red;
   content: '';
   height: 40%;
@@ -137,15 +137,12 @@ Middle-Column                          >
 .game-literal {
   text-align: center;
   position: relative;
+  margin-bottom: 9rem
 }
 
 #game{
   background: rgba(0, 0, 0, 0.644);
   border: 3px solid red;
-}
-
-.fa-caret-up:hover{
-  color: red;
 }
 
 .landing-page:before{
@@ -154,7 +151,7 @@ Middle-Column                          >
   background: rgb(255, 255, 255);
   height: 28%;
   width: 50%;
-  top: 90%;
+  top: 98.6%;
   transform-origin: right;
   transform: skewY(9deg);
 }
@@ -165,7 +162,7 @@ Middle-Column                          >
   background: rgb(255, 255, 255);
   height: 28%;
   width: 50%;
-  top: 83.7%;
+  top: 90%;
   right: 0%;
   transform-origin: bottom center;
   transform: skewY(-9deg);
@@ -175,31 +172,25 @@ Middle-Column                          >
 Right-Column                           >
 /* ================================= */
 
-
 h4{
   text-align: center;
   margin-top: 2rem;
   font-size: 2rem;
 }
 
-.fa-caret-down{
-  display: block;
-}
-
 /* ===================================\
 Text-Divider                           >
 /* ================================= */
-
 
 .text-divider{
   background-color: white;
   text-align: center;
   font-size: 3rem;
   position: relative;
+  margin-top: 5rem;
 }
 
 .divider-title{
-  margin-top: -2rem;
   border-bottom: 3px solid red;
   display: inline-block;
 }
@@ -213,10 +204,9 @@ Lore (Page 2)                          >
   display: grid;
   grid-template-columns: 30rem 30rem;
   justify-content: space-around;
-  text-align: center;
   margin-top: 5rem;
+  text-align: center;
   text-transform: uppercase;
-  
 }
 
 .descriptive-text{
