@@ -11,6 +11,7 @@
 .main-page{
   background: no-repeat fixed url('/img/new-wallpaper.jpg');
   background-size: cover;
+  clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 95% );
 }
 
 .landing-page{
@@ -122,12 +123,39 @@ Left-Column                            >
   z-index: -1;
 }
 
-.top-player{
+.player-name{
   font-size: 5rem;
   letter-spacing: 1.5rem;
   margin-top: 3rem;
   position: relative;
   z-index: 1;
+}
+
+.player-ui{
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 5rem;
+  z-index: 3;
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+}
+
+.player-ui:before{
+  position: absolute;
+  content: '';
+  background-color: red;
+  width: 1%;
+  height: 100%;
+  left: 11rem;
+}
+
+.player-ui li{
+  display: inline;
+}
+
+.player-level{
+  margin-right: 2rem;
 }
 
 /* ===================================\
@@ -137,7 +165,6 @@ Middle-Column                          >
 .game-literal {
   text-align: center;
   position: relative;
-  margin-bottom: 9rem
 }
 
 #game{
@@ -145,54 +172,35 @@ Middle-Column                          >
   border: 3px solid red;
 }
 
-.landing-page:before{
-  content: '';
-  position: absolute;
-  background: rgb(255, 255, 255);
-  height: 28%;
-  width: 50%;
-  top: 98.6%;
-  transform-origin: right;
-  transform: skewY(9deg);
-}
-
-.landing-page:after{
-  content: '';
-  position: absolute;
-  background: rgb(255, 255, 255);
-  height: 28%;
-  width: 50%;
-  top: 90%;
-  right: 0%;
-  transform-origin: bottom center;
-  transform: skewY(-9deg);
-}
-
 /* ===================================\
 Right-Column                           >
 /* ================================= */
 
-h4{
-  text-align: center;
+.game-info h4{
   margin-top: 2rem;
+  letter-spacing: 1rem;
   font-size: 2rem;
+  text-align: center;
 }
 
-/* ===================================\
-Text-Divider                           >
-/* ================================= */
+       /* ===================================\
+/* Text-Divider                           > */
+      /* ================================= */
 
 .text-divider{
-  background-color: white;
-  text-align: center;
-  font-size: 3rem;
-  position: relative;
+  font-size: 4rem;
   margin-top: 5rem;
+  position: relative;
+  text-align: center;
 }
 
 .divider-title{
   border-bottom: 3px solid red;
   display: inline-block;
+  color: black;
+  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  position: relative;
 }
 
 /* ===================================\
@@ -204,46 +212,63 @@ Lore (Page 2)                          >
   display: grid;
   grid-template-columns: 30rem 30rem;
   justify-content: space-around;
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
   text-transform: uppercase;
 }
 
+.slanted{
+  position: relative;
+}
+
+.slanted:before{
+  background: no-repeat fixed url('/img/artist.jpg');
+  background-color: black;
+  background-size: center;
+  content: '';
+  height: 35rem;
+  left: -10rem;
+  position: absolute;
+  top: 0rem;
+  transform: skewY(-3deg);
+  width: 92.5rem;
+}
+
 .descriptive-text{
   background-color: rgba(0, 0, 0, 0.822);
-  z-index: 2;
   border-top: 4px solid red;
-  margin-bottom: 5rem;
-  position: relative;
-  overflow: hidden;
   font-family: 'Montserrat';
+  margin-bottom: 5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 .descriptive-text h2{
-  margin-top: 2rem;
   font-size: 3rem;
-  padding: 1rem;
   letter-spacing: .5rem;
+  margin-top: 2rem;
+  padding: 1rem;
   text-align: left;
 }
 
 .descriptive-text h3{
-  margin-top: 2rem;
   font-family: 'Montserrat';
+  margin-top: 2rem;
 }
 
 .descriptive-overlay{
-  height: 100%;
-  width: 100%;
-  right: 500px;
-  font-size: 1rem;
-  position: absolute;
-  bottom: 4px;
+  background-color: rgb(0, 0, 0);
   border-top: 4px solid red;
+  bottom: 4px;
+  font-size: 1rem;
+  height: 100%;
+  position: absolute;
+  right: 500px;
+  width: 100%;
   padding: .5rem;
   text-align: center;
   z-index: 5;
-  background-color: rgb(0, 0, 0);
   text-transform: uppercase;
   -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition:         all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -253,89 +278,87 @@ Lore (Page 2)                          >
   margin-bottom: 2rem;
 }
 
-
 .fa-caret-right, .fa-caret-left{
-  font-size: 3rem;
   color: rgb(250, 0, 0);
   cursor: pointer;
+  font-size: 3rem;
 }
 
 .fa-caret-right:hover, .fa-caret-left:hover{
   text-shadow: 0 0 20px #FF0000
 }
 
-.slanted{
-  position: relative;
-}
-
-.slanted:before{
-  content: '';
-  position: absolute;
-  width: 92.5rem;
-  height: 35rem;
-  left: -10rem;
-  top: 0rem;
-  background: no-repeat fixed url('/img/artist.jpg');
-  background-size: center;
-  background-color: black;
-  transform: skewY(-5deg);
-}
 
 /* ===================================\
 Credits (Page 3)                       >
 /* ================================= */
 
-
 .snake-tattoo{
   display: block;
-  width: 10rem;
   margin: 1rem auto;
+  width: 10rem;
 }
 
 .credits {
+  font-size: 2rem;
   margin-top: 10rem;
-  font-size: 4rem;
-  text-align: center;
   position: relative;
+  text-align: center;
   text-shadow: 2px 2px 4px #0000003a;
+  position: relative;
 }
 
-.credits h1{
-  border-bottom: 5px solid red;
+.credits-text{
   display: inline-block;
+  color: black;
+  border-bottom: 5px solid red;
+  cursor: pointer;
 }
 
 footer{
-  text-align: center;
   display: grid;
   grid-template-columns: 20rem 5rem 20rem;
-  justify-content: space-around;
   margin-top: 5rem;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .chris h1, .nick h1{
+  border-top: 5px solid transparent;
   position: relative;
   cursor: pointer;
-  border-top: 5px solid transparent;
+  color: black;
 }
 
-.back-to-top{
-  align-self: end;
-}
 
 footer h2{
   font-family: 'Montserrat';
+  color: black;
 }
 
 .rounded-image{
-  margin-top: 2rem;
-  height: 10rem;
+  border: 10px solid transparent;
   border-radius: 50%;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(#fff, #fff),                               linear-gradient(#bdc3c7, #2c3e50);
+  background-origin: padding-box, border-box;
+  height: 10rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   position: relative;
-  border: 10px solid transparent;
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
-  background-image: linear-gradient(#fff, #fff),                                linear-gradient(#bdc3c7, #2c3e50);
   box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
 }
+
+.back-to-top, i{
+  align-self: end;
+  font-size: 4rem;
+
+}
+
+.back-to-top:hover{
+  color: red;
+}
+
+/* ===================================\
+End of Styles ~~~~~~~~~~~~~~~~~~~      >
+/* ================================= */
