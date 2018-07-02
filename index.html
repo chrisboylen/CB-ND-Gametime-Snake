@@ -12,7 +12,7 @@
 </head>
 <body>
   <section class="main-page">
-      <section class="header">
+      <section class="header" id class="top">
         <div class ="header-box">
           <h1>Escape</h1>
           <h1 class="new-york">New York</h1>
@@ -25,12 +25,9 @@
       <section class="scoreboard">
         <h3 class="top-score">Top Score</h3>
         <h1 class="score-actual">92</h1>
-        <h1 class="top-player">nick</h1>
+        <h1 class="top-player">STK</h1>
       </section>
       <section class="game-literal">
-          <div class="score-overlay">
-              <h2>Leaderboard</h2>
-          </div>
 
         <!-- WARNING CANVAS -->
         <canvas id="game" tabindex=0 width="400" height="600"></canvas>
@@ -39,7 +36,6 @@
       </section>
       <section class="how-to-play">
         <h4 class="special-hover">New Game</h4>
-        <h4 class="special-hover">How to Play</h4>
         <i class="fas fa-caret-down"></i>
       </section>
         <section class="info-box">
@@ -61,6 +57,7 @@
     <div class="descriptive-overlay">
         <h2>Call me Snake</h2>
         <h3>Former Special Forces operator/War Hero in World War III- turned criminal, Snake is on a mission that will gain him a presidential pardon.</h3>
+        <h4>Have fun!</h4>
         <i class="close-instructions fas fa-caret-left"></i>
     </div>
     <h2>New York, 1997</h2>
@@ -73,6 +70,7 @@
 <!-- end instructions -->
 
 <section class="credits" id="madeby">
+    <img class="snake-tattoo" src="img/sneak.png" alt="">
     <h1>Credits</h1>
 </section>
 
@@ -81,17 +79,56 @@
   <section class="chris">
     <h1>Chris Boylen</h1>
     <h2>Front-End Developer</h2>
-    <img class="chris-i rounded-image" src="img/chris.jpg" alt="">
+    <img class="rounded-image" src="img/chris.jpg" alt="">
+  </section>
+  <section class="back-to-top">
+      <a href="#top"><i class="fas fa-caret-up"></i></a>
   </section>
   <section class="nick">
     <h1>Nick D'Ambrosio</h1>
     <h2>Front-End Developer</h2>
-    <img class = "nick-i rounded-image"src="img/nick.jpg">
+    <img class = "rounded-image"src="img/nick.jpg">
   </section>
 </footer>
+
 <!-- end footer -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="main.bundle.js"></script>
   <script src="stylescript.js"></script>
 </body>
 </html>
+
+
+<!-- <section class='leaderboard-actual'>
+                  <div class="name-column">Name
+                      <p class="name1">STK</p>
+                      <p class="name2">MAL</p>
+                      <p class="name3">KIM</p>
+                      <p class="name4">RAD</p>
+                      <p class="name5">ASS</p>
+                      <p class="name6">YES</p>
+                      <p class="name7">NOP</p>
+                      <p class="name8">DUM</p>
+                  </div>
+                  <div> -
+                    <p>......................</p>
+                    <p>......................</p>
+                    <p>......................</p>
+                    <p>......................</p>
+                    <p>......................</p>
+                    <p>......................</p>
+                    <p>......................</p>
+                    <p>......................</p>
+                    <i class="fas close-scoreboard fa-caret-up"></i>
+                  </div>
+                  <div class="score-column">Score
+                      <p class="score1">92</p>
+                      <p class="score2">56</p>
+                      <p class="score3">52</p>
+                      <p class="score4">48</p>
+                      <p class="score5">44</p>
+                      <p class="score6">23</p>
+                      <p class="score7">22</p>
+                      <p class="score8">11</p>
+                  </div>
+                </section> -->
