@@ -131,14 +131,30 @@ Left-Column                            >
   z-index: 1;
 }
 
-.player-ui{
-  font-size: 1.2rem;
+.high-score-input{
+  margin-top: 2rem;
+}
+
+.score-input{
+  font-size: 1.5rem;
+  padding: .5rem;
+  font-family: 'Montserrat';
+  margin-right: 2rem;
   color: white;
-  margin-bottom: 5rem;
-  z-index: 3;
-  list-style-type: none;
   text-align: center;
+  border: 1px solid red;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+
+.player-ui{
+  color: white;
+  font-size: 1.2rem;
+  list-style-type: none;
+  margin-bottom: 5rem;
   position: relative;
+  text-align: center;
+  z-index: 1;
 }
 
 .player-ui:before{
@@ -168,7 +184,7 @@ Middle-Column                          >
 }
 
 #game{
-  background: rgba(0, 0, 0, 0.644);
+  background: rgba(0, 0, 0, 0.856);
   border: 3px solid red;
 }
 
