@@ -6,6 +6,7 @@
   font-family: "newyorkescape";
   color: rgb(228, 228, 228);
   border: red;
+  list-style-type: none;
 }
 
 .main-page{
@@ -16,8 +17,7 @@
 
 .landing-page{
   display: grid;
-  grid-template-columns: 30rem 30rem 30rem;
-  position: relative;
+  grid-template-columns: 35rem 40rem 15rem;
 }
 
        /* ===================================\
@@ -25,59 +25,30 @@
       /* ================================= */
 
 .header{
-  margin-bottom: .5rem;
   padding-bottom: 1rem;
-  text-align: center;
-}
-
-.header-box{
-  display: grid;
-  justify-content: center;
-  margin-bottom: 1rem;
-  position: relative;
-  text-align: left;
-}
-
-.new-york{
-  position: relative;
-}
-
-.new-york:before{
-  bottom: 3rem;
-  border-bottom: 2px solid;
-  border-top: 2px solid;
-  content: 'from';
-  font-size: 1.5rem;
-  height: 55%;
-  left: 16rem;
-  position: absolute;
-  width:30%;
+  text-align: left
 }
 
 .header h1{
+  color: rgb(228, 0, 0);
+  font-size: 3.5rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.from-text{
+  font-size: 2rem;
   color: red;
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px #000000;
+  border-top: 3px solid rgb(224, 0, 0);
+  border-bottom: 3px solid rgb(207, 0, 0);
 }
 
-.header-box :nth-child(2){
-  letter-spacing: .5rem;
+.new-york{
+  letter-spacing: 1rem;
 }
 
-.main-nav{
-  display: grid;
-  grid-template-columns: 10rem 10rem 10rem;
-  justify-content: center;
-}
-
-.main-nav li, a{
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Montserrat';
-  position: relative;
-  text-shadow: 2px 2px 4px #000000;
-  text-decoration: none;
-  text-transform: uppercase;
+.header-box{
+  margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 
        /* ===================================\
@@ -92,12 +63,7 @@
 }
 
 .top-score{
-  letter-spacing: 1rem;
-}
-
-.top-score:hover{
-  cursor: pointer;
-  text-shadow: 0 0 3px rgb(255, 255, 255)
+  letter-spacing: .5rem;
 }
 
 .score-actual{
@@ -113,21 +79,30 @@
   background: red;
   content: '';
   height: 40%;
-  left: 5rem;
+  left: 7.5rem;
   position: absolute;
   text-shadow: 2px 2px 4px #000000;
   top: 3rem;
-  transform: skewY(9deg);
-  width: 60%;
+  width: 50%;
   z-index: -1;
+  transition: .5s; 
+}
+
+.score-actual:hover:after{
+  content: '';
+  border: 4px solid red;
+  background: none;
+  height: 200%;
+  position: absolute;
+  top: -2rem;
+  z-index: -4;
 }
 
 .player-name{
-  font-size: 5rem;
   letter-spacing: 1.5rem;
-  margin-top: 3rem;
-  position: relative;
-  z-index: 1;
+  font-size: 5rem;
+  display: inline-block;
+  margin-right: 1rem;
 }
 
 .high-score-input{
@@ -138,31 +113,28 @@
   font-size: 1.5rem;
   padding: .5rem;
   font-family: 'Montserrat';
+  margin-top: 8rem;
   margin-right: 2rem;
   color: white;
   text-align: center;
   border: 1px solid red;
   background-color: rgba(0, 0, 0, 0.705);
+  visibility: hidden;
 }
+
+
+       /* ===================================\
+/* Player-UI                                  >
+      /* ================================= */
+
 
 
 .player-ui{
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   list-style-type: none;
-  margin-bottom: 5rem;
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
-
-.player-ui:before{
-  position: absolute;
-  content: '';
-  background-color: red;
-  width: 1%;
-  height: 100%;
-  left: 11rem;
+  margin: 0 0 5rem 1rem;
+  grid-column: 2/5
 }
 
 .player-ui li{
@@ -179,8 +151,7 @@
 
       
 .game-literal {
-  text-align: center;
-  position: relative;
+  text-align: left;
 }
 
 #game{
@@ -208,6 +179,32 @@
   transition: .5s; 
 }
 
+.welcome-screen{
+  background-color: black;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 36.25rem;
+  top: 10rem;
+  text-align: center;
+  font-size: 2rem;
+  transition: .5s; 
+
+}
+
+.welcome-screen h5{
+  font-size: 2rem;
+  padding: 3rem;
+  align-content: center;
+  font-family: 'Montserrat';
+  margin-top: 10rem;
+}
+
+.fa-times-circle:hover{
+  color: red;
+  cursor: pointer;
+}
+
 .game-over i{
   opacity: 0;
   transition: .5s; 
@@ -230,12 +227,36 @@
 /* Right-Column                              >
       /* ================================= */
 
-.game-info h4{
-  margin-top: 2rem;
-  letter-spacing: 1rem;
-  font-size: 2rem;
+.main-nav {
   text-align: center;
 }
+
+.main-nav a{
+  font-family: 'Montserrat';
+  letter-spacing: .3rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: .5s; 
+}
+
+.special-li{
+  margin: 4.2rem 0;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+  position: relative;
+}
+
+.special-li:hover:after{
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 2rem;
+  background-color: red;
+  left: 2rem;
+  top: -5;
+  z-index: -1;
+  transform: skewY(-3deg)
+}
+
 
        /* ===================================\
 /* Text-Divider                           > */
@@ -335,13 +356,13 @@
 .descriptive-overlay h4{
   font-size: 2rem;
 }
-.fa-caret-right, .fa-caret-left{
+.fa-caret-right, .fa-caret-left, .fa-caret-down{
   color: rgb(250, 0, 0);
   cursor: pointer;
   font-size: 3rem;
 }
 
-.fa-caret-right:hover, .fa-caret-left:hover{
+.fa-caret-right:hover, .fa-caret-left:hover, .fa-caret-down:hover{
   text-shadow: 0 0 20px #FF0000
 }
 

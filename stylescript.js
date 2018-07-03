@@ -10,3 +10,9 @@ $('.close-instructions').click(function() {
 $('.new-game').click(function(){
   $(".game-over").css("visibility", "visible");
 })
+
+$('.fa-times-circle').click(function(){
+  $(".welcome-screen").css("opacity", 0);
+  $(".welcome-screen").animate({left: -500});
+})
+

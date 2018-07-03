@@ -12,16 +12,10 @@
   <section class="main-page">
       <section class="header" id class="top">
         <div class ="header-box">
-          <h1>Escape</h1>
+          <h1>Escape <span class="from-text" >From</span></h1>
           <h1 class="new-york">New York</h1>
         </div>
-        <div class="main-nav">
-          <li class="special-li"><a href="#lore">Lore</a></li>
-          <li class="special-li view-scoreboard">Scores</li>
-          <li><a href="#madeby">Credits</a></li>
-        </div>
       </section>
-
     <section class="landing-page">
       <!-- Left Column -->
       <section class="scoreboard">
@@ -34,27 +28,36 @@
       </section>
       <!-- Middle Column -->
       <section class="game-literal">
-        <canvas id="game" tabindex=0 width="400" height="600"></canvas>
+
+<canvas id="game" tabindex=0 width="600" height="600"></canvas>
+        <section class="welcome-screen">
+          <h5>Use W, A, S, D keyboard keys to maneuver Snake Plissken and form a gang to save the President!</h5>
+          <i class="fas fa-times-circle"></i>
+        </section>
         <section class="game-over">
           <h2 class="game-over-text">MISSION FAILED</h2>
           <h5 class="retry-button"><i class="fas fa-caret-right"></i>Retry?</h5>
           <section class="input-your-score">
             <input type="text" class="player-score-input">
           </section>
-
         </section>
       </section>
       <!-- Right Column -->
       <section class="game-info">
-        <h4 class="new-game">New Game</h4>
+          <div class="main-nav">
+              <li class="special-li"><a href="#lore">New Game</a></li>
+              <li class="special-li"><a href="#lore">Leaderboard</a></li>
+              <li class="special-li"><a href="#lore">Lore</a></li>
+              <li class="special-li"><a href="#lore">Project Specs</a></li>
+              <li class="special-li"><a href="#lore">Credits</a></li>
+              <i class="close-instructions fas fa-caret-down"></i>
+            </div>
       </section>
       <!-- Back to first Column -->
       <section class='player-ui'>
-        <li class='player-level'>Score: <span class="level-actual">0</span></li> 
-        <li>Lives Remaining: <span class="lives">3</span></li>
-      </section>
-      <section class="audio">
-      </section>
+          <li class='player-level'>Score: <span class="player-score">0</span></li> 
+          <li>Lives: <span class="lives">3</span></li>
+        </section>
     </section>
   </section>
 <!-- end Landing -->
