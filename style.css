@@ -150,7 +150,7 @@
 }
 
        /* ===================================\
-/* Middle-Column                              >
+/* Middle-Column (Canvas)                     >
       /* ================================= */
 
       
@@ -162,6 +162,11 @@
   background: rgba(0, 0, 0, 0.856);
   border: 3px solid red;
 }
+
+       /* =====================\
+/* Game Over screen             >
+      /* ==================== */
+
 
 .game-over{
   position: absolute;
@@ -182,6 +187,11 @@
   color: rgba(255, 255, 255, 0.527);
   transition: .5s; 
 }
+
+       /* =====================\
+/* Welcome Screen                >
+      /* ==================== */
+
 
 .welcome-screen{
   background-color: black;
@@ -209,9 +219,34 @@
   margin-top: 5rem;
 }
 
-.fa-times-circle:hover{
-  color: red;
-  cursor: pointer;
+       /* =====================\
+/* Leaderboard                  >
+      /* ==================== */
+
+.leaderboard{
+  background-color: black;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  left: 36.25rem;
+  top: 10rem;
+  text-align: center;
+  font-size: 2rem;
+  transition: .5s; 
+  visibility: hidden;
+}
+
+.leaderboard h1{
+  font-size: 3rem;
+  color: rgb(206, 1, 1);
+  padding: 2rem;
+}
+
+.leaderboard li{
+  font-size: 2rem;
+  padding: 3rem;
+  align-content: center;
+  font-family: 'Montserrat';
 }
 
 .game-over i{
@@ -241,26 +276,25 @@
 }
 
 .main-nav a{
-  font-family: 'Montserrat';
   letter-spacing: .3rem;
   font-size: 1.5rem;
   text-decoration: none;
   transition: .5s; 
 }
 
-.special-li{
+.main-nav li{
   margin: 4.2rem 0;
   text-shadow: 0 0 20px rgb(0, 0, 0);
   position: relative;
 }
 
-.special-li:hover:after{
+.main-nav li:hover:after{
   content: '';
   position: absolute;
   width: 60%;
   height: 2rem;
   background-color: red;
-  left: 2rem;
+  left: 2.5rem;
   top: -5;
   z-index: -1;
   transform: skewY(-3deg)
@@ -268,8 +302,9 @@
 
 
        /* ===================================\
-/* Text-Divider                           > */
+/* Text-Divider                               >
       /* ================================= */
+
 
 .text-divider{
   font-size: 4rem;
@@ -288,7 +323,7 @@
 }
 
        /* ===================================\
-/* Lore (2)                                   >
+/* Lore (Page 2)                              >
       /* ================================= */
 
 
@@ -467,6 +502,10 @@ footer h2{
 
 .back-to-top:hover{
   color: red;
+}
+
+.hide{
+  visibility: visible;
 }
 
        /* ===================================\

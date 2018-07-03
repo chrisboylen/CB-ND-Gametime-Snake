@@ -11,9 +11,14 @@ $('.new-game').click(function(){
   $(".game-over").css("visibility", "visible");
 })
 
-$('.fa-times-circle').click(function(){
+$('.close-welcome').click(function(){
   $(".header-box").css("opacity", 100);
   $(".welcome-screen").css("opacity", 0);
   $(".welcome-screen").animate({left: -500});
 })
 
+const element = $('.leaderboard');
+
+$('.show-scoreboard').click(function() {
+  element.classList.toggle("hide");
+});

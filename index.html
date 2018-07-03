@@ -33,8 +33,17 @@
         <section class="welcome-screen">
           <h1>Escape From New York</h1>
           <h5>Use W, A, S, D keyboard keys to maneuver Snake Plissken and form a gang to save the President!</h5>
-          <i class="fas fa-times-circle"></i>
+          <i class="fas fa-times-circle close-welcome"></i>
         </section>
+
+        <section class="leaderboard">
+            <h1>Top Players</h1>
+            <ul>
+              <li>STK ........................... 92</li>
+            </ul>
+
+          </section>
+
         <section class="game-over">
           <h2 class="game-over-text">MISSION FAILED</h2>
           <h5 class="retry-button"><i class="fas fa-caret-right"></i>Retry?</h5>
@@ -46,12 +55,11 @@
       <!-- Right Column -->
       <section class="game-info">
           <div class="main-nav">
-              <li class="special-li"><a href="#lore">New Game</a></li>
-              <li class="special-li"><a href="#lore">Leaderboard</a></li>
-              <li class="special-li"><a href="#lore">Lore</a></li>
-              <li class="special-li"><a href="#lore">Project Specs</a></li>
-              <li class="special-li"><a href="#lore">Credits</a></li>
-              <i class="close-instructions fas fa-caret-down"></i>
+              <li><a href="#">New Game</a></li>
+              <li><a class = "show-scoreboard" href="#">Scores</a></li>
+              <li><a href="#lore">Lore</a></li>
+              <li><a href="#credits">Credits</a></li>
+              <i class="fas fa-caret-down"></i>
             </div>
       </section>
       <!-- Back to first Column -->
@@ -73,21 +81,20 @@
   <section class="slanted"></section>
   <section class="descriptive-text">
     <div class="descriptive-overlay">
-      <h2>Call me Snake</h2>
-      <h3>Former Special Forces operator/War Hero in World War III- turned criminal, Snake is on a mission that will gain him a presidential pardon.</h3>
-      <h4>Have fun!</h4>
+      <h2>"Call me Snake"</h2>
+      <h3>Former Special Forces Operator/War Hero in World War III- turned criminal, Snake Plissken is on a mission that will gain him a presidential pardon.</h3>
       <i class="close-instructions fas fa-caret-left"></i>
     </div>
       <h2>New York, 1997</h2>
-      <h3>The President is being held hostage in Manhattan, which is now a maximum security prison</h3>
-      <h3>Play as Snake Plissken as you infiltrate the island and rescue the President to earn your freedom!</h3>
+      <h3>Manhattan has been turned into a Maximum Security Prison. Breaking out is impossible... Breaking in is insane!</h3>
+      <h3>Search through the island and rescue the president before the time is up!</h3>
       <i class="open-instructions fas fa-caret-right"></i>
   </section>
 </section>
 
 <!-- end instructions -->
 
-<section class="credits" id="madeby">
+<section class="credits" id="credits">
     <img class="snake-tattoo" src="img/sneak.png" alt="">
     <h1 class="credits-text">Credits</h1>
 </section>
@@ -99,7 +106,7 @@
     <a class="chris-pic"href="https://github.com/chrisboylen"><img class="rounded-image" src="img/chris.jpg" alt=""></a>
   </section>
   <section class="back-to-top">
-    <audio controls loop>
+    <audio controls autoplay loop>
       <source src ="music/song.mp3" type="audio/mpeg">
     </audio>
   </section>
