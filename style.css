@@ -20,6 +20,19 @@
   grid-template-columns: 35rem 40rem 15rem;
 }
 
+i{
+  color: red;
+}
+
+i:hover{
+  cursor: pointer;
+  text-shadow: 0 0 20px #FF0000
+}
+
+p{
+  font-family: 'Montserrat';
+}
+
        /* ===================================\
 /* Header                                    >
       /* ================================= */
@@ -128,28 +141,6 @@
 
 
        /* ===================================\
-/* Player-UI                                  >
-      /* ================================= */
-
-
-
-.player-ui{
-  color: white;
-  font-size: 1.7rem;
-  list-style-type: none;
-  margin: 0 0 5rem 1rem;
-  grid-column: 2/5
-}
-
-.player-ui li{
-  display: inline;
-}
-
-.player-level{
-  margin-right: 2rem;
-}
-
-       /* ===================================\
 /* Middle-Column (Canvas)                     >
       /* ================================= */
 
@@ -160,7 +151,11 @@
 
 #game{
   background: rgba(0, 0, 0, 0.856);
-  border: 3px solid red;
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  /* background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0)),                               linear-gradient(#bb0202, #740000); */
+  background-origin: padding-box, border-box;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
 }
 
        /* =====================\
@@ -171,13 +166,13 @@
 .game-over{
   position: absolute;
   bottom: 15rem;
+  right: 2rem;
   font-size: 2rem;
-  letter-spacing: .5rem;
   visibility: hidden;
+  text-align: center;
 }
 
 .game-over-text{
-  margin-bottom: 1rem;
   text-shadow: 0 0 3px rgb(255, 255, 255);
   transition: .5s; 
 }
@@ -186,6 +181,29 @@
   cursor: pointer;
   color: rgba(255, 255, 255, 0.527);
   transition: .5s; 
+}
+
+.game-over i{
+  opacity: 0;
+  transition: .5s; 
+  font-size: 2rem;
+}
+
+.game-over h5:hover{
+  color: white;
+}
+
+.game-over:hover i{
+  opacity: 1;
+}
+
+.player-score-input{
+  margin-top: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 8rem;
+  color: black;
+  font-family: 'Montserrat';
 }
 
        /* =====================\
@@ -219,6 +237,12 @@
   margin-top: 5rem;
 }
 
+.welcome-screen h2:hover{
+  cursor: pointer;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
+
+}
+
        /* =====================\
 /* Leaderboard                  >
       /* ==================== */
@@ -249,23 +273,28 @@
   font-family: 'Montserrat';
 }
 
-.game-over i{
-  opacity: 0;
-  transition: .5s; 
-  font-size: 2rem;
-}
 
-.game-over h5:hover{
-  color: white;
-}
+       /* ===================================\
+/* Player-UI                                  >
+      /* ================================= */
 
-.game-over:hover i{
-  opacity: 1;
-}
 
-.player-score-input{
-  margin-top: 5rem;
-}
+
+      .player-ui{
+        color: white;
+        font-size: 1.7rem;
+        list-style-type: none;
+        margin: 0 0 5rem 1rem;
+        grid-column: 2/5
+      }
+      
+      .player-ui li{
+        display: inline;
+      }
+      
+      .player-level{
+        margin-right: 2rem;
+      }
 
        /* ===================================\
 /* Right-Column                              >
@@ -406,9 +435,6 @@
   font-size: 3rem;
 }
 
-.fa-caret-right:hover, .fa-caret-left:hover, .fa-caret-down:hover{
-  text-shadow: 0 0 20px #FF0000
-}
 
 
        /* ===================================\

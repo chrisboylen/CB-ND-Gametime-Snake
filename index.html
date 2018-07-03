@@ -32,11 +32,11 @@
 <canvas id="game" tabindex=0 width="600" height="600"></canvas>
         <section class="welcome-screen">
           <h1>Escape From New York</h1>
-          <h5>Use W, A, S, D keyboard keys to maneuver Snake Plissken and form a gang to save the President!</h5>
-          <i class="fas fa-times-circle close-welcome"></i>
+          <h5>How to play: Use W, A, S, D keyboard keys to maneuver Snake Plissken and form a gang to save the President!</h5>
+          <h2 class="start-game">Start!</h2>
         </section>
 
-        <section class="leaderboard">
+        <section id="leaderboard">
             <h1>Top Players</h1>
             <ul>
               <li>STK ........................... 92</li>
@@ -48,14 +48,16 @@
           <h2 class="game-over-text">MISSION FAILED</h2>
           <h5 class="retry-button"><i class="fas fa-caret-right"></i>Retry?</h5>
           <section class="input-your-score">
-            <input type="text" class="player-score-input">
+            <input type="text" maxlength='3' class="player-score-input">
+
+            <p>Enter Your Initials</p>
           </section>
         </section>
       </section>
       <!-- Right Column -->
       <section class="game-info">
           <div class="main-nav">
-              <li><a href="#">New Game</a></li>
+              <li class="new-game"><a href="#">New Game</a></li>
               <li><a class = "show-scoreboard" href="#">Scores</a></li>
               <li><a href="#lore">Lore</a></li>
               <li><a href="#credits">Credits</a></li>
@@ -73,7 +75,7 @@
 
 <!-- diamond divider -->
 <section class="text-divider">
-  <h3 class="divider-title" id="lore">Escape From New York</h3>
+  <h3 class="divider-title" id="lore">Lore</h3>
 </section>
 
 <!-- Lore  -->
