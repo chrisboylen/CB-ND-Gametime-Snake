@@ -180,7 +180,7 @@ p{
 
 .game-over h5{
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.527);
+  color: rgba(255, 255, 255, 0.507);
   transition: .5s; 
 }
 
