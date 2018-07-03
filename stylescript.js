@@ -12,6 +12,7 @@ $('.new-game').click(function(){
 })
 
 $('.fa-times-circle').click(function(){
+  $(".header-box").css("opacity", 100);
   $(".welcome-screen").css("opacity", 0);
   $(".welcome-screen").animate({left: -500});
 })
