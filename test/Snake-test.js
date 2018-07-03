@@ -22,7 +22,25 @@ describe('Snake', () => {
       color: "green",
       dx: 1,
       dxv: 1.5
-    });
+    })
+  })
 
-  });
+  it('Should be able to make the first part of the snake', () => {
+    snake.makeInitialSnake();
+    const expectedState = 4
+    const actualState = snake.tail.length
+
+    expect(actualState).equal(expectedState);
+  })
+
+  it('Should be able to move left', () => {
+    snake.move('left');
+
+    const expectedState = snake.head.x - 20
+    const actualState = snake.newTail.x
+
+    expect(actualState).toEqual(expectedState);
+  })
+
+  // 
 });
