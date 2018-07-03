@@ -11,16 +11,13 @@ $('.new-game').click(function(){
   location.reload();
 })
 
-
-
-
-submitNewScore() {
-  let userName = $('.player-score-input'.val();
+const submitNewScore = () => {
+  let userName = $('.player-score-input'.val());
   let userScore = $(this.score)
   let newScore = `<li>${userName} ............. ${userScore}</li>`;
   $('score-list').prepend(newScore)
 }
 
-
+// module.exports = stylescript;
 
 
