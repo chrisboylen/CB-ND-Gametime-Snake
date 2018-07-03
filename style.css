@@ -31,7 +31,8 @@ i:hover{
 
 p{
   font-family: 'Montserrat';
-}
+}  
+
 
        /* ===================================\
 /* Header                                    >
@@ -151,11 +152,8 @@ p{
 
 #game{
   background: rgba(0, 0, 0, 0.856);
-  border: 3px solid transparent;
-  background-clip: padding-box, border-box;
-  /* background-image: linear-gradient(rgb(255, 0, 0), rgb(255, 0, 0)),                               linear-gradient(#bb0202, #740000); */
-  background-origin: padding-box, border-box;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, .5);
+  border: 3px solid red;
+  
 }
 
        /* =====================\
@@ -165,21 +163,24 @@ p{
 
 .game-over{
   position: absolute;
-  bottom: 15rem;
-  right: 2rem;
+  bottom: 8rem;
+  right: 17.5rem;
   font-size: 2rem;
   visibility: hidden;
   text-align: center;
 }
 
 .game-over-text{
-  text-shadow: 0 0 3px rgb(255, 255, 255);
   transition: .5s; 
+}
+
+.game-over h2{
+  color: red;
 }
 
 .game-over h5{
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.527);
+  color: rgba(255, 255, 255, 0.507);
   transition: .5s; 
 }
 
@@ -197,8 +198,12 @@ p{
   opacity: 1;
 }
 
+.score-list{
+  margin-bottom: 3rem;
+}
+
 .player-score-input{
-  margin-top: 5rem;
+  margin-top: 1rem;
   font-size: 2rem;
   text-align: center;
   width: 8rem;

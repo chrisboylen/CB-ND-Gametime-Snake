@@ -8,15 +8,19 @@ $('.close-instructions').click(function() {
 
 
 $('.new-game').click(function(){
-  $(".game-over").css("visibility", "visible");
-})
-
-
-
-
-$('.retry-button').click(function(){
   location.reload();
 })
+
+
+
+
+submitNewScore() {
+  let userName = $('.player-score-input'.val();
+  let userScore = $(this.score)
+  let newScore = `<li>${userName} ............. ${userScore}</li>`;
+  $('score-list').prepend(newScore)
+}
+
 
 
 
