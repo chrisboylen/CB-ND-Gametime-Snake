@@ -7,9 +7,6 @@ $('.close-instructions').click(function() {
 });
 
 
-$('.new-game').click(function(){
-  location.reload();
-})
 
 const submitNewScore = () => {
   let userName = $('.player-score-input'.val());

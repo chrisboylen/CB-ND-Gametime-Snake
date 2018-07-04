@@ -34,10 +34,10 @@ describe('Snake', () => {
   })
 
   it('Should be able to move left', () => {
-    snake.move('left');
+    snake.changeDirection = ('left');
 
-    const expectedState = snake.head.x - 20
-    const actualState = snake.newTail.x
+    const expectedState = 'left'
+    const actualState = snake.changeDirection('left')
 
     expect(actualState).toEqual(expectedState);
   })
@@ -57,15 +57,6 @@ describe('Snake', () => {
 
     const expectedState = newLength;
     const actualState = snake.tail[0] -20;
-
-    expect(actualState).equal(expectedState);
-  })
-
-  it('Should reduce lives when snake dies', () => {
-    const lives = snake.lives;
-    const expectedState = 2;
-    snake.death();
-    const actualState = snake.lives;
 
     expect(actualState).equal(expectedState);
   })
