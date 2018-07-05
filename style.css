@@ -1,6 +1,6 @@
 @font-face {
   font-family: newyorkescape;
-  src: url('/font/newyorkescape.ttf');
+  src: url('/lib/newyorkescape.ttf');
 }
 
 *{
@@ -14,7 +14,7 @@
 }
 
 .main-page{
-  background: no-repeat fixed url('/img/new-wallpaper.jpg');
+  background: no-repeat fixed url('/lib/new-wallpaper.jpg');
   background-size: cover;
   clip-path: polygon( 0 0, 100% 0, 100% 100%, 0 95% );
 }
@@ -373,7 +373,7 @@ p{
 }
 
 .slanted:before{
-  background: no-repeat fixed url('/img/artist.jpg');
+  background: no-repeat fixed url('/lib/artist.jpg');
   background-color: black;
   background-size: center;
   content: '';
