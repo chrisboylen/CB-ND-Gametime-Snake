@@ -1,12 +1,12 @@
 
 *{
+  border: red;
   box-sizing: border-box;
+  color: rgb(228, 228, 228);
+  font-family: "newyorkescape";
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  font-family: "newyorkescape";
-  color: rgb(228, 228, 228);
-  border: red;
-  list-style-type: none;
 }
 
 .main-page{
@@ -41,13 +41,15 @@ p{
 .header{
   padding-bottom: 1rem;
   text-align: left;
- 
+  transition: .9s;
+  visibility: hidden;
 }
 
 .header h1{
   color: rgb(228, 0, 0);
   font-size: 3.5rem;
   text-shadow: 2px 2px 4px #000000;
+  transition: .9s;
 
 }
 
@@ -65,8 +67,8 @@ p{
 .header-box{
   margin-left: 2rem;
   margin-bottom: 1rem;
-  opacity: 0;
   transition: .9s;
+  visibility: hidden;
 }
 
        /* ===================================\
@@ -81,15 +83,16 @@ p{
 }
 
 .top-score{
-  letter-spacing: .5rem;
+  margin-right: 2rem;
+  text-align: center;
 }
 
 .score-actual{
   font-size: 8rem;
-  text-shadow: 2px 2px 4px #00000093;
   letter-spacing: 2rem;
   margin-top: 6rem;
   position: relative;
+  text-shadow: 2px 2px 4px #00000093;
   z-index: 2;  
 }
 
@@ -110,16 +113,16 @@ p{
   content: '';
   border: 4px solid red;
   background: none;
-  height: 200%;
+  height: 420%;
   position: absolute;
-  top: -2rem;
+  top: -10rem;
   z-index: -4;
 }
 
 .player-name{
-  letter-spacing: 1.5rem;
-  font-size: 5rem;
   display: inline-block;
+  font-size: 5rem;
+  letter-spacing: 1.5rem;
   margin-right: 1rem;
 }
 
@@ -128,24 +131,22 @@ p{
 }
 
 .score-input{
+  background-color: rgba(0, 0, 0, 0.705);
+  border: 1px solid red;
+  color: white;
   font-size: 1.5rem;
-  padding: .5rem;
   font-family: 'Montserrat';
   margin-top: 8rem;
   margin-right: 2rem;
-  color: white;
+  padding: .5rem;
   text-align: center;
-  border: 1px solid red;
-  background-color: rgba(0, 0, 0, 0.705);
   visibility: hidden;
 }
-
 
        /* ===================================\
 /* Middle-Column (Canvas)                     >
       /* ================================= */
-
-      
+ 
 .game-literal {
   text-align: left;
 }
@@ -153,7 +154,6 @@ p{
 #game{
   background: rgba(0, 0, 0, 0.856);
   border: 3px solid red;
-  
 }
 
        /* =====================\
@@ -162,12 +162,12 @@ p{
 
 
 .game-over{
-  position: absolute;
   bottom: 8rem;
-  right: 17.5rem;
   font-size: 2rem;
-  visibility: hidden;
+  right: 17.5rem;
+  position: absolute;
   text-align: center;
+  visibility: hidden;
 }
 
 .game-over-text{
@@ -179,15 +179,14 @@ p{
 }
 
 .game-over h5{
-  cursor: pointer;
   color: rgba(255, 255, 255, 0.507);
-  transition: .5s; 
+  cursor: pointer;
 }
 
 .game-over i{
+  font-size: 2rem;
   opacity: 0;
   transition: .5s; 
-  font-size: 2rem;
 }
 
 .game-over h5:hover{
@@ -226,6 +225,7 @@ p{
   text-align: center;
   transition: .5s; 
   width: 600px;
+  visibility: visible;
 }
 
 .welcome-screen h1{
@@ -245,7 +245,6 @@ p{
 .welcome-screen h2:hover{
   cursor: pointer;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.568);
-
 }
 
        /* =====================\
@@ -278,12 +277,9 @@ p{
   padding: 3rem;
 }
 
-
        /* ===================================\
 /* Player-UI                                  >
       /* ================================= */
-
-
 
 .player-ui{
   color: white;
@@ -392,7 +388,6 @@ p{
   border-top: 4px solid red;
   font-family: 'Montserrat';
   margin-bottom: 5rem;
-  overflow: hidden;
   position: relative;
   z-index: 2;
 }
@@ -416,10 +411,10 @@ p{
   bottom: 4px;
   font-size: 1rem;
   height: 100%;
-  position: absolute;
-  right: 500px;
-  width: 100%;
   padding: .5rem;
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
   text-align: center;
   text-transform: uppercase;
   -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -461,15 +456,14 @@ p{
 }
 
 .credits-text{
-  display: inline-block;
-  color: black;
   border-bottom: 5px solid red;
+  color: black;
   cursor: pointer;
+  display: inline-block;
   position: relative;
 }
 
 .credits-text:after{
-  position: absolute;
   content: '#1804SuperHot🔥';
   color: black;
   font-family: 'Montserrat';
@@ -477,6 +471,7 @@ p{
   height: 150%;
   left: -7.5rem;
   opacity: 0;
+  position: absolute;
   top: 10rem;
   transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   width: 200%;
@@ -489,8 +484,8 @@ p{
 footer{
   display: grid;
   grid-template-columns: 20rem 5rem 20rem;
-  margin-top: 5rem;
   justify-content: space-around;
+  margin-top: 5rem;
   text-align: center;
 }
 
