@@ -65,8 +65,9 @@ p{
 .header-box{
   margin-left: 2rem;
   margin-bottom: 1rem;
-  opacity: 0;
+  /* opacity: 0; */
   transition: .9s;
+  visibility: hidden;
 }
 
        /* ===================================\
@@ -226,6 +227,7 @@ p{
   text-align: center;
   transition: .5s; 
   width: 600px;
+  visibility: visible;
 }
 
 .welcome-screen h1{
