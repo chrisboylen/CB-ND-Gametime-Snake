@@ -1,3 +1,7 @@
+@font-face {
+  font-family: newyorkescape;
+  src: url('/font/newyorkescape.ttf');
+}
 
 *{
   border: red;
