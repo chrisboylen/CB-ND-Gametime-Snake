@@ -1,12 +1,12 @@
 
 *{
+  border: red;
   box-sizing: border-box;
+  color: rgb(228, 228, 228);
+  font-family: "newyorkescape";
+  list-style-type: none;
   margin: 0;
   padding: 0;
-  font-family: "newyorkescape";
-  color: rgb(228, 228, 228);
-  border: red;
-  list-style-type: none;
 }
 
 .main-page{
@@ -41,8 +41,8 @@ p{
 .header{
   padding-bottom: 1rem;
   text-align: left;
-  visibility: hidden;
   transition: .9s;
+  visibility: hidden;
 }
 
 .header h1{
@@ -67,7 +67,6 @@ p{
 .header-box{
   margin-left: 2rem;
   margin-bottom: 1rem;
-  /* opacity: 0; */
   transition: .9s;
   visibility: hidden;
 }
@@ -89,10 +88,10 @@ p{
 
 .score-actual{
   font-size: 8rem;
-  text-shadow: 2px 2px 4px #00000093;
   letter-spacing: 2rem;
   margin-top: 6rem;
   position: relative;
+  text-shadow: 2px 2px 4px #00000093;
   z-index: 2;  
 }
 
@@ -120,9 +119,9 @@ p{
 }
 
 .player-name{
-  letter-spacing: 1.5rem;
-  font-size: 5rem;
   display: inline-block;
+  font-size: 5rem;
+  letter-spacing: 1.5rem;
   margin-right: 1rem;
 }
 
@@ -139,9 +138,9 @@ p{
   font-family: 'Montserrat';
   margin-top: 8rem;
   margin-right: 2rem;
+  padding: .5rem;
   text-align: center;
   visibility: visible;
-  padding: .5rem;
 }
 
 
@@ -183,8 +182,8 @@ p{
 }
 
 .game-over h5{
-  cursor: pointer;
   color: rgba(255, 255, 255, 0.507);
+  cursor: pointer;
 }
 
 .game-over i{
@@ -281,12 +280,9 @@ p{
   padding: 3rem;
 }
 
-
        /* ===================================\
 /* Player-UI                                  >
       /* ================================= */
-
-
 
 .player-ui{
   color: white;
@@ -395,7 +391,6 @@ p{
   border-top: 4px solid red;
   font-family: 'Montserrat';
   margin-bottom: 5rem;
-  overflow: hidden;
   position: relative;
   z-index: 2;
 }
@@ -421,7 +416,7 @@ p{
   height: 100%;
   padding: .5rem;
   position: absolute;
-  right: 500px;
+  /* visibility: hidden; */
   width: 100%;
   text-align: center;
   text-transform: uppercase;
