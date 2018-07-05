@@ -86,11 +86,6 @@ p{
   text-shadow: 2px 2px 4px #000000c7;
 }
 
-.top-score{
-  margin-right: 2rem;
-  text-align: center;
-}
-
 .score-actual{
   font-size: 8rem;
   letter-spacing: 2rem;
@@ -144,7 +139,6 @@ p{
   margin-right: 2rem;
   padding: .5rem;
   text-align: center;
-  visibility: hidden;
 }
 
        /* ===================================\
