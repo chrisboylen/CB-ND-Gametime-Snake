@@ -79,6 +79,10 @@ p{
 /* Left-Column                               >
       /* ================================= */
 
+.top-score{
+  margin-right: 3rem;
+}
+      
 .scoreboard{
   font-size: 2rem; 
   margin-top: 2rem;
