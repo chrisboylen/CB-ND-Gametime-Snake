@@ -140,7 +140,7 @@ p{
   margin-right: 2rem;
   padding: .5rem;
   text-align: center;
-  visibility: visible;
+  visibility: hidden;
 }
 
 
@@ -416,7 +416,7 @@ p{
   height: 100%;
   padding: .5rem;
   position: absolute;
-  /* visibility: hidden; */
+  visibility: hidden;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
