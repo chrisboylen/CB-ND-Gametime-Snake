@@ -22,7 +22,10 @@ After removing the canvas wallpaper and deciding to not mess with drawing unnece
 ###  V1.0 
 I finally found a high-res enough scan of the poster from the movie Escape From New York. I had to lower the color settings a bit.
 <img width="1440" alt="design 3" src="https://user-images.githubusercontent.com/34214595/42326785-686dc640-8027-11e8-990c-3c1eda75173b.png">
+
+I decided to add an extra page to our game, which added some initial complexity. How are we going to stop the arrow keys from scrolling through the page? I assume most others with this project didn't have this issue, because their site was only one 100VH. We quickly came up with a solution to have the control keys be WASD instead. This actually made playing the game a lot easier and more intuitive, as Macbook Pro's have smaller UP and DOWN arrow keys, making it easier to accidentally hit one or the other.
 <img width="1440" alt="design4" src="https://user-images.githubusercontent.com/34214595/42326786-687f4a1e-8027-11e8-9baa-c126fcf3ae7d.png">
+Lastly, we needed a way for our users to learn more about us. I added a small contact menu bar with shiny buttons at the bottom. I'd like to add some more magic to this section at some point, but I didn't want to detract from the game more than I already did.
 <img width="1440" alt="design5" src="https://user-images.githubusercontent.com/34214595/42326787-688e39b6-8027-11e8-9b2b-ce03b032f703.png">
 
 
