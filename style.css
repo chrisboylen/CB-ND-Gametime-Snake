@@ -83,7 +83,8 @@ p{
 }
 
 .top-score{
-  letter-spacing: .5rem;
+  margin-right: 2rem;
+  text-align: center;
 }
 
 .score-actual{
@@ -112,9 +113,9 @@ p{
   content: '';
   border: 4px solid red;
   background: none;
-  height: 200%;
+  height: 420%;
   position: absolute;
-  top: -2rem;
+  top: -10rem;
   z-index: -4;
 }
 
@@ -129,7 +130,6 @@ p{
   margin-top: 2rem;
 }
 
-
 .score-input{
   background-color: rgba(0, 0, 0, 0.705);
   border: 1px solid red;
@@ -143,12 +143,10 @@ p{
   visibility: hidden;
 }
 
-
        /* ===================================\
 /* Middle-Column (Canvas)                     >
       /* ================================= */
-
-      
+ 
 .game-literal {
   text-align: left;
 }
@@ -156,7 +154,6 @@ p{
 #game{
   background: rgba(0, 0, 0, 0.856);
   border: 3px solid red;
-  
 }
 
        /* =====================\
