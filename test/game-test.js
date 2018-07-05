@@ -8,7 +8,7 @@ describe('Game', () => {
   let snake;
   let food;
   beforeEach(() => {
-    game = new Game(context, false, 0, 0, snake = new Snake(50, 50, 10, 10, 'rgb(255, 0, 0)', 1), food = new Food(150, 10, 10, 10, 'rgb(0, 255, 0)'));
+    game = new Game(false, 0, 0, snake = new Snake(50, 50, 20, 20, 'rgb(255, 0, 0)', 1), food = new Food(350, 20, 20, 20, 'rgb(0, 255, 0)'));
   });
 
   it('Should exist', () => {
@@ -19,12 +19,11 @@ describe('Game', () => {
   it('Should set instance properties', () => {
     const actualState = game;
     const expectedState = {
-      context: context,
       gameOver: false,
       score: 0,
       highScore: 0,
-      snake: new Snake(50, 50, 20, 20, 'rgb(255, 0, 0)', 1),
-      food: new Food(150, 10, 18, 18, 'rgb(0, 255, 0)')
+      snake: new Snake(50, 50, 20, 20, 'rgb(255, 0, 0)', 0),
+      food: new Food(350, 20, 20, 20, 'rgb(0, 255, 0)')
     }
 
     expect(actualState).to.deep.equal(expectedState);
@@ -38,4 +37,10 @@ describe('Game', () => {
 
     expect(actualState).to.deep.equal(expectedState);
   });
+
+  it('Should increase score by one after eating food', () => {
+    const eatFood = snake.isCollidingWith(food);
+    const actualState = snake.score;
+    const expectedState = 1;
+  })
 });

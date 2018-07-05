@@ -101,9 +101,9 @@ p{
   position: absolute;
   text-shadow: 2px 2px 4px #000000;
   top: 3rem;
+  transition: .5s; 
   width: 50%;
   z-index: -1;
-  transition: .5s; 
 }
 
 .score-actual:hover:after{
@@ -203,12 +203,12 @@ p{
 }
 
 .player-score-input{
-  margin-top: 1rem;
-  font-size: 2rem;
-  text-align: center;
-  width: 8rem;
   color: black;
   font-family: 'Montserrat';
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: center;
+  width: 8rem;
 }
 
        /* =====================\
@@ -218,28 +218,28 @@ p{
 
 .welcome-screen{
   background-color: black;
-  width: 600px;
+  font-size: 2rem;
   height: 600px;
   position: absolute;
   left: 36.25rem;
   top: 10rem;
   text-align: center;
-  font-size: 2rem;
   transition: .5s; 
+  width: 600px;
 }
 
 .welcome-screen h1{
-  font-size: 3rem;
   color: rgb(206, 1, 1);
+  font-size: 3rem;
   padding: 2rem;
 }
 
 .welcome-screen h5{
-  font-size: 2rem;
-  padding: 3rem;
   align-content: center;
+  font-size: 2rem;
   font-family: 'Montserrat';
   margin-top: 5rem;
+  padding: 3rem;
 }
 
 .welcome-screen h2:hover{
@@ -254,28 +254,28 @@ p{
 
 .leaderboard{
   background-color: black;
-  width: 600px;
   height: 600px;
-  position: absolute;
+  font-size: 2rem;
   left: 36.25rem;
+  position: absolute;
   top: 10rem;
   text-align: center;
-  font-size: 2rem;
   transition: .5s; 
   visibility: hidden;
+  width: 600px;
 }
 
 .leaderboard h1{
-  font-size: 3rem;
   color: rgb(206, 1, 1);
+  font-size: 3rem;
   padding: 2rem;
 }
 
 .leaderboard li{
-  font-size: 2rem;
-  padding: 3rem;
   align-content: center;
   font-family: 'Montserrat';
+  font-size: 2rem;
+  padding: 3rem;
 }
 
 
@@ -285,21 +285,21 @@ p{
 
 
 
-      .player-ui{
-        color: white;
-        font-size: 1.7rem;
-        list-style-type: none;
-        margin: 0 0 5rem 1rem;
-        grid-column: 2/5
-      }
-      
-      .player-ui li{
-        display: inline;
-      }
-      
-      .player-level{
-        margin-right: 2rem;
-      }
+.player-ui{
+  color: white;
+  font-size: 3rem;
+  grid-column: 1/3;
+  list-style-type: none;
+  margin: 0 0 5rem 1rem;
+}
+
+.player-ui li{
+  display: inline;
+}
+
+.player-level{
+  margin-right: 2rem;
+}
 
        /* ===================================\
 /* Right-Column                              >
@@ -318,20 +318,20 @@ p{
 
 .main-nav li{
   margin: 4.2rem 0;
-  text-shadow: 0 0 20px rgb(0, 0, 0);
   position: relative;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .main-nav li:hover:after{
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 2rem;
   background-color: red;
+  content: '';
+  height: 2rem;
+  position: absolute;
   left: 2.5rem;
   top: -5;
+  transform: skewY(-3deg);
+  width: 60%;
   z-index: -1;
-  transform: skewY(-3deg)
 }
 
 
@@ -421,10 +421,10 @@ p{
   width: 100%;
   padding: .5rem;
   text-align: center;
-  z-index: 5;
   text-transform: uppercase;
   -webkit-transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition:         all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 5;
 }
 
 .descriptive-overlay h3{
@@ -458,7 +458,6 @@ p{
   position: relative;
   text-align: center;
   text-shadow: 2px 2px 4px #0000003a;
-  position: relative;
 }
 
 .credits-text{
@@ -472,15 +471,15 @@ p{
 .credits-text:after{
   position: absolute;
   content: '#1804SuperHot🔥';
+  color: black;
+  font-family: 'Montserrat';
   font-size: 2rem;
-  width: 200%;
   height: 150%;
   left: -7.5rem;
-  color: black;
-  top: 10rem;
-  font-family: 'Montserrat';
   opacity: 0;
+  top: 10rem;
   transition: all 300ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  width: 200%;
 }
 
 .credits-text:hover:after{
@@ -497,15 +496,15 @@ footer{
 
 .chris h1, .nick h1{
   border-top: 5px solid transparent;
-  position: relative;
   cursor: pointer;
   color: black;
+  position: relative;
 }
 
 
 footer h2{
-  font-family: 'Montserrat';
   color: black;
+  font-family: 'Montserrat';
 }
 
 .rounded-image{
@@ -536,7 +535,11 @@ footer h2{
 }
 
 .hide{
-  visibility: visible;
+  visibility: hidden;
+}
+
+.shown{
+  visibility: visible
 }
 
        /* ===================================\
