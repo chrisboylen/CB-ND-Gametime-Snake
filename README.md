@@ -6,9 +6,9 @@
   * Run app [localhost:8080](https://www.localhost:8080)
 ## Goals
 
-Use OOP to drive the design of the game and the code
-Separate business-logic code from view-related code
-Create a robust test suite that thoroughly tests all functionality of a client-side application
+  * Use OOP to drive the design of the game and the code
+  * Separate business-logic code from view-related code
+  * Create a robust test suite that thoroughly tests all functionality of a client-side application
 
 ## Screenshots
 
