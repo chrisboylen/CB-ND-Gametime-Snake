@@ -1,4 +1,5 @@
 # Escape from New York
+Escape from New York is recreation of the classic video game snake. We adapted it to have a theme from the 80's movie Escape from New York. It is playable in the browser.
 ## Setup 
   * git clone https://github.com/chrisboylen/CB-ND-Gametime-Snake.git
   * cd CB-ND-Gametime-Snake
